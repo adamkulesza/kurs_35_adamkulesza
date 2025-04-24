@@ -4,17 +4,9 @@ Alive - Pearl Jem
 
 001_refren.txt
 
-Oh, she walks slowly, across a young man's room
-She said" I'm ready...for you"
-I can't remember anything to this very day
-'Cept the look, the look...
-Oh, you know where, now I can't see, I just stare...
+002_zwrotka.txt
 
-I, I'm still alive
-Hey I, but, I'm still alive
-Hey I, boy, I'm still alive
-Hey I, I, I, I'm still alive, yeah
-Ooh yeah...yeah yeah yeah...oh...oh...
+002_refren_txt
 
 "Is something wrong" she said
 Well of course there is
