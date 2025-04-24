@@ -1,15 +1,8 @@
 Alive - Pearl Jem
 
-"Son" she said "have I got a little story for you
-What you thought was your daddy was nothin' but a...
-While you were sittin' home alone at age thirteen
-Your real daddy was dyin', sorry you didn't see him,
-but I'm glad we talked..."
+001_zwrotka.txt
 
-Oh I, oh, I'm still alive
-Hey, I, I, oh, I'm still alive
-Hey I, oh, I'm still alive
-Hey...oh...
+001_refren.txt
 
 Oh, she walks slowly, across a young man's room
 She said" I'm ready...for you"
@@ -35,5 +28,4 @@ Hey I, oh, I'm still alive
 Hey I, but, I'm still alive
 Yeah I, ooh, I'm still alive
 Yeah yeah yeah yeah yeah yeah
-
 
