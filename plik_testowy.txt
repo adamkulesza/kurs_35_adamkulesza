@@ -1,2 +1,0 @@
-to jest plik testowy
-chce go wypuszowac do swojego prywatnego repozytorium
