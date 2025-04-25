@@ -1,0 +1,1015 @@
+commit 35b327cebf76918b43b62804a045edde6178d26c
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 18:18:37 2025 +0200
+
+    usuniecie pliku historia.txt
+
+diff --git a/historia.txt b/historia.txt
+deleted file mode 100644
+index 15980f7..0000000
+--- a/historia.txt
++++ /dev/null
+@@ -1,345 +0,0 @@
+-commit 51135025b9241254dcc63ecca6cd31781ae61cec
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 15:46:37 2025 +0200
+-
+-    usuniecie powtarzajacych sie plikow zwrotek 002_zwrotka.txt i 003_zwrotka.txt i zastapienie w pliku piosenka.txt nazw tych plikow nazwa 001_zwrotka.txt
+-
+-diff --git a/002_refren.txt b/002_refren.txt
+-deleted file mode 100644
+-index 7529772..0000000
+---- a/002_refren.txt
+-+++ /dev/null
+-@@ -1,5 +0,0 @@
+--I, I'm still alive
+--Hey I, but, I'm still alive
+--Hey I, boy, I'm still alive
+--Hey I, I, I, I'm still alive, yeah
+--Ooh yeah...yeah yeah yeah...oh...oh...
+-diff --git a/003_refren.txt b/003_refren.txt
+-deleted file mode 100644
+-index da23b79..0000000
+---- a/003_refren.txt
+-+++ /dev/null
+-@@ -1,5 +0,0 @@
+--I, oh, I'm still alive
+--Hey I, oh, I'm still alive
+--Hey I, but, I'm still alive
+--Yeah I, ooh, I'm still alive
+--Yeah yeah yeah yeah yeah yeah
+-diff --git a/piosenka.txt b/piosenka.txt
+-index b63f449..1c1b789 100644
+---- a/piosenka.txt
+-+++ b/piosenka.txt
+-@@ -6,9 +6,9 @@ Alive - Pearl Jem
+- 
+- 002_zwrotka.txt
+- 
+--002_refren_txt
+-+001_refren.txt
+- 
+- 003_zwrotka.txt
+- 
+--003_refren.txt
+-+001_refren.txt
+- 
+-
+-commit c9c0fdd64e0efc43b142780b89fd8ae0baabebd5
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 15:41:07 2025 +0200
+-
+-    Revert "usuniecie pierwszej linijki z pliku 001_refren.txt"
+-    
+-    This reverts commit 19ea743e51f3a49aea66b69118c54e07e4ab894c.
+-
+-diff --git a/001_refren.txt b/001_refren.txt
+-index 344512a..328ec49 100644
+---- a/001_refren.txt
+-+++ b/001_refren.txt
+-@@ -1,3 +1,4 @@
+-+Oh I, oh, I'm still alive
+- Hey, I, I, oh, I'm still alive
+- Hey I, oh, I'm still alive
+- Hey...oh...
+-
+-commit 19ea743e51f3a49aea66b69118c54e07e4ab894c
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 15:24:56 2025 +0200
+-
+-    usuniecie pierwszej linijki z pliku 001_refren.txt
+-
+-diff --git a/001_refren.txt b/001_refren.txt
+-index 328ec49..344512a 100644
+---- a/001_refren.txt
+-+++ b/001_refren.txt
+-@@ -1,4 +1,3 @@
+--Oh I, oh, I'm still alive
+- Hey, I, I, oh, I'm still alive
+- Hey I, oh, I'm still alive
+- Hey...oh...
+-
+-commit 7c7458dbaebe7ee6ba686c0656d0a34a325a949c
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 14:12:46 2025 +0200
+-
+-    stworzenie pliku 003_refren.txt i zastapienie w pliku piosenka.txt trzeciego refrenu nazwa pliku 003_refren.txt
+-
+-diff --git a/003_refren.txt b/003_refren.txt
+-new file mode 100644
+-index 0000000..da23b79
+---- /dev/null
+-+++ b/003_refren.txt
+-@@ -0,0 +1,5 @@
+-+I, oh, I'm still alive
+-+Hey I, oh, I'm still alive
+-+Hey I, but, I'm still alive
+-+Yeah I, ooh, I'm still alive
+-+Yeah yeah yeah yeah yeah yeah
+-diff --git a/piosenka.txt b/piosenka.txt
+-index 2130912..b63f449 100644
+---- a/piosenka.txt
+-+++ b/piosenka.txt
+-@@ -10,9 +10,5 @@ Alive - Pearl Jem
+- 
+- 003_zwrotka.txt
+- 
+--I, oh, I'm still alive
+--Hey I, oh, I'm still alive
+--Hey I, but, I'm still alive
+--Yeah I, ooh, I'm still alive
+--Yeah yeah yeah yeah yeah yeah
+-+003_refren.txt
+- 
+-
+-commit d3ef2cd2d6acb534aa474b59e3b4ba5d5454e116
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 14:07:32 2025 +0200
+-
+-    stworzenie pliku 003_zwrotka.txt i zastapienie w pliku piosenka.txt trzeciej zwrotki nazwa pliku 003_zwrotka.txt
+-
+-diff --git a/003_zwrotka.txt b/003_zwrotka.txt
+-new file mode 100644
+-index 0000000..16f34fa
+---- /dev/null
+-+++ b/003_zwrotka.txt
+-@@ -0,0 +1,6 @@
+-+"Is something wrong" she said
+-+Well of course there is
+-+"You're still alive" she said
+-+Oh, and do I deserve to be
+-+Is that the question
+-+And if so...if so...who answers...who answers...
+-diff --git a/piosenka.txt b/piosenka.txt
+-index 9802e18..2130912 100644
+---- a/piosenka.txt
+-+++ b/piosenka.txt
+-@@ -8,12 +8,7 @@ Alive - Pearl Jem
+- 
+- 002_refren_txt
+- 
+--"Is something wrong" she said
+--Well of course there is
+--"You're still alive" she said
+--Oh, and do I deserve to be
+--Is that the question
+--And if so...if so...who answers...who answers...
+-+003_zwrotka.txt
+- 
+- I, oh, I'm still alive
+- Hey I, oh, I'm still alive
+-
+-commit bf9b296e3dee896891d8a738fa021fd049d8d94f
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 14:03:20 2025 +0200
+-
+-    stworzenie pliku 002_refren.txt i zastapienie w pliku piosenka.txt refrenu drugiego nazwa pliku 002_refren.txt
+-
+-diff --git a/002_refren.txt b/002_refren.txt
+-new file mode 100644
+-index 0000000..7529772
+---- /dev/null
+-+++ b/002_refren.txt
+-@@ -0,0 +1,5 @@
+-+I, I'm still alive
+-+Hey I, but, I'm still alive
+-+Hey I, boy, I'm still alive
+-+Hey I, I, I, I'm still alive, yeah
+-+Ooh yeah...yeah yeah yeah...oh...oh...
+-diff --git a/piosenka.txt b/piosenka.txt
+-index 047bb62..9802e18 100644
+---- a/piosenka.txt
+-+++ b/piosenka.txt
+-@@ -4,13 +4,9 @@ Alive - Pearl Jem
+- 
+- 001_refren.txt
+- 
+--001_zwrotka.txt
+-+002_zwrotka.txt
+- 
+--I, I'm still alive
+--Hey I, but, I'm still alive
+--Hey I, boy, I'm still alive
+--Hey I, I, I, I'm still alive, yeah
+--Ooh yeah...yeah yeah yeah...oh...oh...
+-+002_refren_txt
+- 
+- "Is something wrong" she said
+- Well of course there is
+-
+-commit a6888b64d2fa66c0d494f5364719cd015f50b42e
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 13:20:11 2025 +0200
+-
+-    stworzenie pliku 002_zwrotka.txt i zastpienie w pliku piosenka.txt zwrotki drugiej nazwa liku 002_zwrotka.txt
+-
+-diff --git a/002_zwrotka.txt b/002_zwrotka.txt
+-new file mode 100644
+-index 0000000..b5a6c71
+---- /dev/null
+-+++ b/002_zwrotka.txt
+-@@ -0,0 +1,5 @@
+-+Oh, she walks slowly, across a young man's room
+-+She said" I'm ready...for you"
+-+I can't remember anything to this very day
+-+'Cept the look, the look...
+-+Oh, you know where, now I can't see, I just stare...
+-diff --git a/piosenka.txt b/piosenka.txt
+-index 10523ce..047bb62 100644
+---- a/piosenka.txt
+-+++ b/piosenka.txt
+-@@ -4,11 +4,7 @@ Alive - Pearl Jem
+- 
+- 001_refren.txt
+- 
+--Oh, she walks slowly, across a young man's room
+--She said" I'm ready...for you"
+--I can't remember anything to this very day
+--'Cept the look, the look...
+--Oh, you know where, now I can't see, I just stare...
+-+001_zwrotka.txt
+- 
+- I, I'm still alive
+- Hey I, but, I'm still alive
+-
+-commit acec1f5315a4db023819794783c1514ff74f138f
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 13:15:18 2025 +0200
+-
+-    stworzenie pliku 001_refren.txt i zastapienie w pliku piosenka.txt pierwszego refrenu nazwa pliku 001_refren.txt
+-
+-diff --git a/001_refren.txt b/001_refren.txt
+-new file mode 100644
+-index 0000000..328ec49
+---- /dev/null
+-+++ b/001_refren.txt
+-@@ -0,0 +1,4 @@
+-+Oh I, oh, I'm still alive
+-+Hey, I, I, oh, I'm still alive
+-+Hey I, oh, I'm still alive
+-+Hey...oh...
+-diff --git a/piosenka.txt b/piosenka.txt
+-index 7adf5d1..10523ce 100644
+---- a/piosenka.txt
+-+++ b/piosenka.txt
+-@@ -2,10 +2,7 @@ Alive - Pearl Jem
+- 
+- 001_zwrotka.txt
+- 
+--Oh I, oh, I'm still alive
+--Hey, I, I, oh, I'm still alive
+--Hey I, oh, I'm still alive
+--Hey...oh...
+-+001_refren.txt
+- 
+- Oh, she walks slowly, across a young man's room
+- She said" I'm ready...for you"
+-
+-commit 1a9e922f2222008ddfb3daf06f4e2c07471268ce
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 13:11:08 2025 +0200
+-
+-    stworzenie pliku 001_zwrotka.txt i zastapienie w pliku piosenka.txt zwrotki pierwszej nazwa pliku 001_zwrotka.txt
+-
+-diff --git a/001_zwrotka.txt b/001_zwrotka.txt
+-new file mode 100644
+-index 0000000..248ad9d
+---- /dev/null
+-+++ b/001_zwrotka.txt
+-@@ -0,0 +1,5 @@
+-+"Son" she said "have I got a little story for you
+-+What you thought was your daddy was nothin' but a...
+-+While you were sittin' home alone at age thirteen
+-+Your real daddy was dyin', sorry you didn't see him,
+-+but I'm glad we talked..."
+-diff --git a/piosenka.txt b/piosenka.txt
+-index 0b2859d..7adf5d1 100644
+---- a/piosenka.txt
+-+++ b/piosenka.txt
+-@@ -1,10 +1,6 @@
+- Alive - Pearl Jem
+- 
+--"Son" she said "have I got a little story for you
+--What you thought was your daddy was nothin' but a...
+--While you were sittin' home alone at age thirteen
+--Your real daddy was dyin', sorry you didn't see him,
+--but I'm glad we talked..."
+-+001_zwrotka.txt
+- 
+- Oh I, oh, I'm still alive
+- Hey, I, I, oh, I'm still alive
+-@@ -36,4 +32,3 @@ Hey I, but, I'm still alive
+- Yeah I, ooh, I'm still alive
+- Yeah yeah yeah yeah yeah yeah
+- 
+--
+-
+-commit 53234f93f0291dd4907adbeea29e23cf5ffa7521
+-Author: adamkulesza <bernardkulesza@gmail.com>
+-Date:   Thu Apr 24 13:05:55 2025 +0200
+-
+-    stworzenie pliku piosenka.txt
+-
+-diff --git a/piosenka.txt b/piosenka.txt
+-new file mode 100644
+-index 0000000..0b2859d
+---- /dev/null
+-+++ b/piosenka.txt
+-@@ -0,0 +1,39 @@
+-+Alive - Pearl Jem
+-+
+-+"Son" she said "have I got a little story for you
+-+What you thought was your daddy was nothin' but a...
+-+While you were sittin' home alone at age thirteen
+-+Your real daddy was dyin', sorry you didn't see him,
+-+but I'm glad we talked..."
+-+
+-+Oh I, oh, I'm still alive
+-+Hey, I, I, oh, I'm still alive
+-+Hey I, oh, I'm still alive
+-+Hey...oh...
+-+
+-+Oh, she walks slowly, across a young man's room
+-+She said" I'm ready...for you"
+-+I can't remember anything to this very day
+-+'Cept the look, the look...
+-+Oh, you know where, now I can't see, I just stare...
+-+
+-+I, I'm still alive
+-+Hey I, but, I'm still alive
+-+Hey I, boy, I'm still alive
+-+Hey I, I, I, I'm still alive, yeah
+-+Ooh yeah...yeah yeah yeah...oh...oh...
+-+
+-+"Is something wrong" she said
+-+Well of course there is
+-+"You're still alive" she said
+-+Oh, and do I deserve to be
+-+Is that the question
+-+And if so...if so...who answers...who answers...
+-+
+-+I, oh, I'm still alive
+-+Hey I, oh, I'm still alive
+-+Hey I, but, I'm still alive
+-+Yeah I, ooh, I'm still alive
+-+Yeah yeah yeah yeah yeah yeah
+-+
+-+
+
+commit c3fb9d6502d03555a6da359d31629d92e3fd7609
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 16:14:46 2025 +0200
+
+    usuniecie powtarzajacych sie refrenow i zastapienie w pliku piosenka powtarzajacych sie refrenow nazwa 001_refren.txt
+
+diff --git a/002_refren.txt b/002_refren.txt
+deleted file mode 100644
+index 7529772..0000000
+--- a/002_refren.txt
++++ /dev/null
+@@ -1,5 +0,0 @@
+-I, I'm still alive
+-Hey I, but, I'm still alive
+-Hey I, boy, I'm still alive
+-Hey I, I, I, I'm still alive, yeah
+-Ooh yeah...yeah yeah yeah...oh...oh...
+diff --git a/003_refren.txt b/003_refren.txt
+deleted file mode 100644
+index da23b79..0000000
+--- a/003_refren.txt
++++ /dev/null
+@@ -1,5 +0,0 @@
+-I, oh, I'm still alive
+-Hey I, oh, I'm still alive
+-Hey I, but, I'm still alive
+-Yeah I, ooh, I'm still alive
+-Yeah yeah yeah yeah yeah yeah
+diff --git a/piosenka.txt b/piosenka.txt
+index b63f449..2ddd7dc 100644
+--- a/piosenka.txt
++++ b/piosenka.txt
+@@ -6,9 +6,9 @@ Alive - Pearl Jem
+ 
+ 002_zwrotka.txt
+ 
+-002_refren_txt
++001_refren_txt
+ 
+ 003_zwrotka.txt
+ 
+-003_refren.txt
++001_refren.txt
+ 
+
+commit c5d05b271e31dd7642098aa5939275c38cc5b818
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 16:10:07 2025 +0200
+
+    Revert "usuniecie pierwszej linijki w pliku 003_refren"
+    
+    This reverts commit 27e90e6f4f05d1fb225a7484a2ebc4ebb206b846.
+
+diff --git a/003_refren.txt b/003_refren.txt
+index 6914c54..da23b79 100644
+--- a/003_refren.txt
++++ b/003_refren.txt
+@@ -1,4 +1,4 @@
+-
++I, oh, I'm still alive
+ Hey I, oh, I'm still alive
+ Hey I, but, I'm still alive
+ Yeah I, ooh, I'm still alive
+
+commit ef7e15ce7c5af82d83458bd3c54cf0b70f3d4a77
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 16:09:20 2025 +0200
+
+    usuniecie pierwszej linijki w pliku 003_refren
+
+diff --git a/003_refren.txt b/003_refren.txt
+index da23b79..6914c54 100644
+--- a/003_refren.txt
++++ b/003_refren.txt
+@@ -1,4 +1,4 @@
+-I, oh, I'm still alive
++
+ Hey I, oh, I'm still alive
+ Hey I, but, I'm still alive
+ Yeah I, ooh, I'm still alive
+
+commit d8b80dbfaa3e5a5c4984433eeccb7257b67d1d0f
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 16:06:52 2025 +0200
+
+    usuniecie 3 pierwszych commitow
+
+diff --git a/historia.txt b/historia.txt
+new file mode 100644
+index 0000000..15980f7
+--- /dev/null
++++ b/historia.txt
+@@ -0,0 +1,345 @@
++commit 51135025b9241254dcc63ecca6cd31781ae61cec
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 15:46:37 2025 +0200
++
++    usuniecie powtarzajacych sie plikow zwrotek 002_zwrotka.txt i 003_zwrotka.txt i zastapienie w pliku piosenka.txt nazw tych plikow nazwa 001_zwrotka.txt
++
++diff --git a/002_refren.txt b/002_refren.txt
++deleted file mode 100644
++index 7529772..0000000
++--- a/002_refren.txt
+++++ /dev/null
++@@ -1,5 +0,0 @@
++-I, I'm still alive
++-Hey I, but, I'm still alive
++-Hey I, boy, I'm still alive
++-Hey I, I, I, I'm still alive, yeah
++-Ooh yeah...yeah yeah yeah...oh...oh...
++diff --git a/003_refren.txt b/003_refren.txt
++deleted file mode 100644
++index da23b79..0000000
++--- a/003_refren.txt
+++++ /dev/null
++@@ -1,5 +0,0 @@
++-I, oh, I'm still alive
++-Hey I, oh, I'm still alive
++-Hey I, but, I'm still alive
++-Yeah I, ooh, I'm still alive
++-Yeah yeah yeah yeah yeah yeah
++diff --git a/piosenka.txt b/piosenka.txt
++index b63f449..1c1b789 100644
++--- a/piosenka.txt
+++++ b/piosenka.txt
++@@ -6,9 +6,9 @@ Alive - Pearl Jem
++ 
++ 002_zwrotka.txt
++ 
++-002_refren_txt
+++001_refren.txt
++ 
++ 003_zwrotka.txt
++ 
++-003_refren.txt
+++001_refren.txt
++ 
++
++commit c9c0fdd64e0efc43b142780b89fd8ae0baabebd5
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 15:41:07 2025 +0200
++
++    Revert "usuniecie pierwszej linijki z pliku 001_refren.txt"
++    
++    This reverts commit 19ea743e51f3a49aea66b69118c54e07e4ab894c.
++
++diff --git a/001_refren.txt b/001_refren.txt
++index 344512a..328ec49 100644
++--- a/001_refren.txt
+++++ b/001_refren.txt
++@@ -1,3 +1,4 @@
+++Oh I, oh, I'm still alive
++ Hey, I, I, oh, I'm still alive
++ Hey I, oh, I'm still alive
++ Hey...oh...
++
++commit 19ea743e51f3a49aea66b69118c54e07e4ab894c
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 15:24:56 2025 +0200
++
++    usuniecie pierwszej linijki z pliku 001_refren.txt
++
++diff --git a/001_refren.txt b/001_refren.txt
++index 328ec49..344512a 100644
++--- a/001_refren.txt
+++++ b/001_refren.txt
++@@ -1,4 +1,3 @@
++-Oh I, oh, I'm still alive
++ Hey, I, I, oh, I'm still alive
++ Hey I, oh, I'm still alive
++ Hey...oh...
++
++commit 7c7458dbaebe7ee6ba686c0656d0a34a325a949c
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 14:12:46 2025 +0200
++
++    stworzenie pliku 003_refren.txt i zastapienie w pliku piosenka.txt trzeciego refrenu nazwa pliku 003_refren.txt
++
++diff --git a/003_refren.txt b/003_refren.txt
++new file mode 100644
++index 0000000..da23b79
++--- /dev/null
+++++ b/003_refren.txt
++@@ -0,0 +1,5 @@
+++I, oh, I'm still alive
+++Hey I, oh, I'm still alive
+++Hey I, but, I'm still alive
+++Yeah I, ooh, I'm still alive
+++Yeah yeah yeah yeah yeah yeah
++diff --git a/piosenka.txt b/piosenka.txt
++index 2130912..b63f449 100644
++--- a/piosenka.txt
+++++ b/piosenka.txt
++@@ -10,9 +10,5 @@ Alive - Pearl Jem
++ 
++ 003_zwrotka.txt
++ 
++-I, oh, I'm still alive
++-Hey I, oh, I'm still alive
++-Hey I, but, I'm still alive
++-Yeah I, ooh, I'm still alive
++-Yeah yeah yeah yeah yeah yeah
+++003_refren.txt
++ 
++
++commit d3ef2cd2d6acb534aa474b59e3b4ba5d5454e116
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 14:07:32 2025 +0200
++
++    stworzenie pliku 003_zwrotka.txt i zastapienie w pliku piosenka.txt trzeciej zwrotki nazwa pliku 003_zwrotka.txt
++
++diff --git a/003_zwrotka.txt b/003_zwrotka.txt
++new file mode 100644
++index 0000000..16f34fa
++--- /dev/null
+++++ b/003_zwrotka.txt
++@@ -0,0 +1,6 @@
+++"Is something wrong" she said
+++Well of course there is
+++"You're still alive" she said
+++Oh, and do I deserve to be
+++Is that the question
+++And if so...if so...who answers...who answers...
++diff --git a/piosenka.txt b/piosenka.txt
++index 9802e18..2130912 100644
++--- a/piosenka.txt
+++++ b/piosenka.txt
++@@ -8,12 +8,7 @@ Alive - Pearl Jem
++ 
++ 002_refren_txt
++ 
++-"Is something wrong" she said
++-Well of course there is
++-"You're still alive" she said
++-Oh, and do I deserve to be
++-Is that the question
++-And if so...if so...who answers...who answers...
+++003_zwrotka.txt
++ 
++ I, oh, I'm still alive
++ Hey I, oh, I'm still alive
++
++commit bf9b296e3dee896891d8a738fa021fd049d8d94f
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 14:03:20 2025 +0200
++
++    stworzenie pliku 002_refren.txt i zastapienie w pliku piosenka.txt refrenu drugiego nazwa pliku 002_refren.txt
++
++diff --git a/002_refren.txt b/002_refren.txt
++new file mode 100644
++index 0000000..7529772
++--- /dev/null
+++++ b/002_refren.txt
++@@ -0,0 +1,5 @@
+++I, I'm still alive
+++Hey I, but, I'm still alive
+++Hey I, boy, I'm still alive
+++Hey I, I, I, I'm still alive, yeah
+++Ooh yeah...yeah yeah yeah...oh...oh...
++diff --git a/piosenka.txt b/piosenka.txt
++index 047bb62..9802e18 100644
++--- a/piosenka.txt
+++++ b/piosenka.txt
++@@ -4,13 +4,9 @@ Alive - Pearl Jem
++ 
++ 001_refren.txt
++ 
++-001_zwrotka.txt
+++002_zwrotka.txt
++ 
++-I, I'm still alive
++-Hey I, but, I'm still alive
++-Hey I, boy, I'm still alive
++-Hey I, I, I, I'm still alive, yeah
++-Ooh yeah...yeah yeah yeah...oh...oh...
+++002_refren_txt
++ 
++ "Is something wrong" she said
++ Well of course there is
++
++commit a6888b64d2fa66c0d494f5364719cd015f50b42e
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 13:20:11 2025 +0200
++
++    stworzenie pliku 002_zwrotka.txt i zastpienie w pliku piosenka.txt zwrotki drugiej nazwa liku 002_zwrotka.txt
++
++diff --git a/002_zwrotka.txt b/002_zwrotka.txt
++new file mode 100644
++index 0000000..b5a6c71
++--- /dev/null
+++++ b/002_zwrotka.txt
++@@ -0,0 +1,5 @@
+++Oh, she walks slowly, across a young man's room
+++She said" I'm ready...for you"
+++I can't remember anything to this very day
+++'Cept the look, the look...
+++Oh, you know where, now I can't see, I just stare...
++diff --git a/piosenka.txt b/piosenka.txt
++index 10523ce..047bb62 100644
++--- a/piosenka.txt
+++++ b/piosenka.txt
++@@ -4,11 +4,7 @@ Alive - Pearl Jem
++ 
++ 001_refren.txt
++ 
++-Oh, she walks slowly, across a young man's room
++-She said" I'm ready...for you"
++-I can't remember anything to this very day
++-'Cept the look, the look...
++-Oh, you know where, now I can't see, I just stare...
+++001_zwrotka.txt
++ 
++ I, I'm still alive
++ Hey I, but, I'm still alive
++
++commit acec1f5315a4db023819794783c1514ff74f138f
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 13:15:18 2025 +0200
++
++    stworzenie pliku 001_refren.txt i zastapienie w pliku piosenka.txt pierwszego refrenu nazwa pliku 001_refren.txt
++
++diff --git a/001_refren.txt b/001_refren.txt
++new file mode 100644
++index 0000000..328ec49
++--- /dev/null
+++++ b/001_refren.txt
++@@ -0,0 +1,4 @@
+++Oh I, oh, I'm still alive
+++Hey, I, I, oh, I'm still alive
+++Hey I, oh, I'm still alive
+++Hey...oh...
++diff --git a/piosenka.txt b/piosenka.txt
++index 7adf5d1..10523ce 100644
++--- a/piosenka.txt
+++++ b/piosenka.txt
++@@ -2,10 +2,7 @@ Alive - Pearl Jem
++ 
++ 001_zwrotka.txt
++ 
++-Oh I, oh, I'm still alive
++-Hey, I, I, oh, I'm still alive
++-Hey I, oh, I'm still alive
++-Hey...oh...
+++001_refren.txt
++ 
++ Oh, she walks slowly, across a young man's room
++ She said" I'm ready...for you"
++
++commit 1a9e922f2222008ddfb3daf06f4e2c07471268ce
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 13:11:08 2025 +0200
++
++    stworzenie pliku 001_zwrotka.txt i zastapienie w pliku piosenka.txt zwrotki pierwszej nazwa pliku 001_zwrotka.txt
++
++diff --git a/001_zwrotka.txt b/001_zwrotka.txt
++new file mode 100644
++index 0000000..248ad9d
++--- /dev/null
+++++ b/001_zwrotka.txt
++@@ -0,0 +1,5 @@
+++"Son" she said "have I got a little story for you
+++What you thought was your daddy was nothin' but a...
+++While you were sittin' home alone at age thirteen
+++Your real daddy was dyin', sorry you didn't see him,
+++but I'm glad we talked..."
++diff --git a/piosenka.txt b/piosenka.txt
++index 0b2859d..7adf5d1 100644
++--- a/piosenka.txt
+++++ b/piosenka.txt
++@@ -1,10 +1,6 @@
++ Alive - Pearl Jem
++ 
++-"Son" she said "have I got a little story for you
++-What you thought was your daddy was nothin' but a...
++-While you were sittin' home alone at age thirteen
++-Your real daddy was dyin', sorry you didn't see him,
++-but I'm glad we talked..."
+++001_zwrotka.txt
++ 
++ Oh I, oh, I'm still alive
++ Hey, I, I, oh, I'm still alive
++@@ -36,4 +32,3 @@ Hey I, but, I'm still alive
++ Yeah I, ooh, I'm still alive
++ Yeah yeah yeah yeah yeah yeah
++ 
++-
++
++commit 53234f93f0291dd4907adbeea29e23cf5ffa7521
++Author: adamkulesza <bernardkulesza@gmail.com>
++Date:   Thu Apr 24 13:05:55 2025 +0200
++
++    stworzenie pliku piosenka.txt
++
++diff --git a/piosenka.txt b/piosenka.txt
++new file mode 100644
++index 0000000..0b2859d
++--- /dev/null
+++++ b/piosenka.txt
++@@ -0,0 +1,39 @@
+++Alive - Pearl Jem
+++
+++"Son" she said "have I got a little story for you
+++What you thought was your daddy was nothin' but a...
+++While you were sittin' home alone at age thirteen
+++Your real daddy was dyin', sorry you didn't see him,
+++but I'm glad we talked..."
+++
+++Oh I, oh, I'm still alive
+++Hey, I, I, oh, I'm still alive
+++Hey I, oh, I'm still alive
+++Hey...oh...
+++
+++Oh, she walks slowly, across a young man's room
+++She said" I'm ready...for you"
+++I can't remember anything to this very day
+++'Cept the look, the look...
+++Oh, you know where, now I can't see, I just stare...
+++
+++I, I'm still alive
+++Hey I, but, I'm still alive
+++Hey I, boy, I'm still alive
+++Hey I, I, I, I'm still alive, yeah
+++Ooh yeah...yeah yeah yeah...oh...oh...
+++
+++"Is something wrong" she said
+++Well of course there is
+++"You're still alive" she said
+++Oh, and do I deserve to be
+++Is that the question
+++And if so...if so...who answers...who answers...
+++
+++I, oh, I'm still alive
+++Hey I, oh, I'm still alive
+++Hey I, but, I'm still alive
+++Yeah I, ooh, I'm still alive
+++Yeah yeah yeah yeah yeah yeah
+++
+++
+
+commit cc78a2f3ba56233171db9f3d7c16ccffe99343f5
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 14:07:32 2025 +0200
+
+    stworzenie pliku 003_zwrotka.txt i zastapienie w pliku piosenka.txt trzeciej zwrotki nazwa pliku 003_zwrotka.txt
+    
+    stworzenie pliku 003_refren.txt i zastapienie w pliku piosenka.txt trzeciego refrenu nazwa pliku 003_refren.txt
+
+diff --git a/003_refren.txt b/003_refren.txt
+new file mode 100644
+index 0000000..da23b79
+--- /dev/null
++++ b/003_refren.txt
+@@ -0,0 +1,5 @@
++I, oh, I'm still alive
++Hey I, oh, I'm still alive
++Hey I, but, I'm still alive
++Yeah I, ooh, I'm still alive
++Yeah yeah yeah yeah yeah yeah
+diff --git a/003_zwrotka.txt b/003_zwrotka.txt
+new file mode 100644
+index 0000000..16f34fa
+--- /dev/null
++++ b/003_zwrotka.txt
+@@ -0,0 +1,6 @@
++"Is something wrong" she said
++Well of course there is
++"You're still alive" she said
++Oh, and do I deserve to be
++Is that the question
++And if so...if so...who answers...who answers...
+diff --git a/piosenka.txt b/piosenka.txt
+index 9802e18..b63f449 100644
+--- a/piosenka.txt
++++ b/piosenka.txt
+@@ -8,16 +8,7 @@ Alive - Pearl Jem
+ 
+ 002_refren_txt
+ 
+-"Is something wrong" she said
+-Well of course there is
+-"You're still alive" she said
+-Oh, and do I deserve to be
+-Is that the question
+-And if so...if so...who answers...who answers...
++003_zwrotka.txt
+ 
+-I, oh, I'm still alive
+-Hey I, oh, I'm still alive
+-Hey I, but, I'm still alive
+-Yeah I, ooh, I'm still alive
+-Yeah yeah yeah yeah yeah yeah
++003_refren.txt
+ 
+
+commit 30630999a534ae3af3a9b27f6c397a91c4c2e215
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 13:20:11 2025 +0200
+
+    stworzenie pliku 002_zwrotka.txt i zastpienie w pliku piosenka.txt zwrotki drugiej nazwa liku 002_zwrotka.txt
+    
+    stworzenie pliku 002_refren.txt i zastapienie w pliku piosenka.txt refrenu drugiego nazwa pliku 002_refren.txt
+
+diff --git a/002_refren.txt b/002_refren.txt
+new file mode 100644
+index 0000000..7529772
+--- /dev/null
++++ b/002_refren.txt
+@@ -0,0 +1,5 @@
++I, I'm still alive
++Hey I, but, I'm still alive
++Hey I, boy, I'm still alive
++Hey I, I, I, I'm still alive, yeah
++Ooh yeah...yeah yeah yeah...oh...oh...
+diff --git a/002_zwrotka.txt b/002_zwrotka.txt
+new file mode 100644
+index 0000000..b5a6c71
+--- /dev/null
++++ b/002_zwrotka.txt
+@@ -0,0 +1,5 @@
++Oh, she walks slowly, across a young man's room
++She said" I'm ready...for you"
++I can't remember anything to this very day
++'Cept the look, the look...
++Oh, you know where, now I can't see, I just stare...
+diff --git a/piosenka.txt b/piosenka.txt
+index 10523ce..9802e18 100644
+--- a/piosenka.txt
++++ b/piosenka.txt
+@@ -4,17 +4,9 @@ Alive - Pearl Jem
+ 
+ 001_refren.txt
+ 
+-Oh, she walks slowly, across a young man's room
+-She said" I'm ready...for you"
+-I can't remember anything to this very day
+-'Cept the look, the look...
+-Oh, you know where, now I can't see, I just stare...
++002_zwrotka.txt
+ 
+-I, I'm still alive
+-Hey I, but, I'm still alive
+-Hey I, boy, I'm still alive
+-Hey I, I, I, I'm still alive, yeah
+-Ooh yeah...yeah yeah yeah...oh...oh...
++002_refren_txt
+ 
+ "Is something wrong" she said
+ Well of course there is
+
+commit d86284c3ee3a48e575dbba43b88e4fdecd019876
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 13:11:08 2025 +0200
+
+    stworzenie pliku 001_zwrotka.txt i zastapienie w pliku piosenka.txt zwrotki pierwszej nazwa pliku 001_zwrotka.txt
+    
+    stworzenie pliku 001_refren.txt i zastapienie w pliku piosenka.txt pierwszego refrenu nazwa pliku 001_refren.txt
+
+diff --git a/001_refren.txt b/001_refren.txt
+new file mode 100644
+index 0000000..328ec49
+--- /dev/null
++++ b/001_refren.txt
+@@ -0,0 +1,4 @@
++Oh I, oh, I'm still alive
++Hey, I, I, oh, I'm still alive
++Hey I, oh, I'm still alive
++Hey...oh...
+diff --git a/001_zwrotka.txt b/001_zwrotka.txt
+new file mode 100644
+index 0000000..248ad9d
+--- /dev/null
++++ b/001_zwrotka.txt
+@@ -0,0 +1,5 @@
++"Son" she said "have I got a little story for you
++What you thought was your daddy was nothin' but a...
++While you were sittin' home alone at age thirteen
++Your real daddy was dyin', sorry you didn't see him,
++but I'm glad we talked..."
+diff --git a/piosenka.txt b/piosenka.txt
+index 0b2859d..10523ce 100644
+--- a/piosenka.txt
++++ b/piosenka.txt
+@@ -1,15 +1,8 @@
+ Alive - Pearl Jem
+ 
+-"Son" she said "have I got a little story for you
+-What you thought was your daddy was nothin' but a...
+-While you were sittin' home alone at age thirteen
+-Your real daddy was dyin', sorry you didn't see him,
+-but I'm glad we talked..."
++001_zwrotka.txt
+ 
+-Oh I, oh, I'm still alive
+-Hey, I, I, oh, I'm still alive
+-Hey I, oh, I'm still alive
+-Hey...oh...
++001_refren.txt
+ 
+ Oh, she walks slowly, across a young man's room
+ She said" I'm ready...for you"
+@@ -36,4 +29,3 @@ Hey I, but, I'm still alive
+ Yeah I, ooh, I'm still alive
+ Yeah yeah yeah yeah yeah yeah
+ 
+-
+
+commit 53234f93f0291dd4907adbeea29e23cf5ffa7521
+Author: adamkulesza <bernardkulesza@gmail.com>
+Date:   Thu Apr 24 13:05:55 2025 +0200
+
+    stworzenie pliku piosenka.txt
+
+diff --git a/piosenka.txt b/piosenka.txt
+new file mode 100644
+index 0000000..0b2859d
+--- /dev/null
++++ b/piosenka.txt
+@@ -0,0 +1,39 @@
++Alive - Pearl Jem
++
++"Son" she said "have I got a little story for you
++What you thought was your daddy was nothin' but a...
++While you were sittin' home alone at age thirteen
++Your real daddy was dyin', sorry you didn't see him,
++but I'm glad we talked..."
++
++Oh I, oh, I'm still alive
++Hey, I, I, oh, I'm still alive
++Hey I, oh, I'm still alive
++Hey...oh...
++
++Oh, she walks slowly, across a young man's room
++She said" I'm ready...for you"
++I can't remember anything to this very day
++'Cept the look, the look...
++Oh, you know where, now I can't see, I just stare...
++
++I, I'm still alive
++Hey I, but, I'm still alive
++Hey I, boy, I'm still alive
++Hey I, I, I, I'm still alive, yeah
++Ooh yeah...yeah yeah yeah...oh...oh...
++
++"Is something wrong" she said
++Well of course there is
++"You're still alive" she said
++Oh, and do I deserve to be
++Is that the question
++And if so...if so...who answers...who answers...
++
++I, oh, I'm still alive
++Hey I, oh, I'm still alive
++Hey I, but, I'm still alive
++Yeah I, ooh, I'm still alive
++Yeah yeah yeah yeah yeah yeah
++
++
