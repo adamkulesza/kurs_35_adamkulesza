@@ -83,8 +83,8 @@
 
 ############################### FORMAT STRING ################################
 
-imie = "Pawel"
-nazwisko = "Kowal"
+# imie = "Pawel"
+# nazwisko = "Kowal"
 # print("twoje imie to: {}, a nazwisko to: {}".format(imie, nazwisko)) #stary zapis w pythonie
 # print("twoje imie to: {imie_wartosc}, a nazwisko to: {nazwisko_wartosc}".format(imie_wartosc=imie, nazwisko_wartosc=nazwisko)) #stary zapis w pythonie
 
@@ -93,22 +93,35 @@ nazwisko = "Kowal"
 
 ###################### STANDARDOWE WEJSCIE ############################
 
-# imie = input("Wpisz imie jubilata: ")
+# imie = input("Podaj imie jubilata: ")
+# nazwisko = input("Podaj nazwisko Jubilata:")
 # zyczenia = input("Wpisz swoje zyczenia: ")
-# print(imie, zyczenia)
+# print(imie, nazwisko, zyczenia)
 
 ##### castowanie danych
 
-# wiek = input("podaj swoj wiek: ")
+# wiek = input("podaj date urodzenia: ")
 # print(wiek)
-#print(f"do 45 lat brakuje Ci {45 - int(wiek)}")
+# print(f"to sa twoje {2025 - int(wiek)} urodziny")
 ####aby okreslic ile brakuje ci lat do wieku 45 lat - (wiek) jest stringiem wiec musimy wymusic zeby wartosc (wiek) czytal jako intiger poprzez takie dzialanie int(wiek)
 
 # dwadziescia_str = str(20) # zamiana intigera na stringa mimo ze jest to intiger
 # print(dwadziescia_str)
 # print(type(dwadziescia_str))
-print(bool(1)) #daje True
-print(bool(0)) #daje False
-print(bool("")) #daje False
-print(bool("dfzdfshfh")) #daje True
-print(bool("0")) #daje True
+# print(bool(1)) #daje True
+# print(bool(0)) #daje False
+# print(bool("")) #daje False
+# print(bool("dfzdfshfh")) #daje True
+# print(bool("0")) #daje True
+
+
+imie = input("Podaj imie jubilata: ")
+nazwisko = input("Podaj nazwisko jubilata: ")
+imie_i_nazwisko_nadawcy = input("podaj imie i nazwisko nadawcy: ")
+zyczenia = input("Wpisz swoje zyczenia: ")
+wiek = input("Podaj date urodzenia: ")
+print(imie, nazwisko)
+print(f"Wszystkiego najlepszego z okazji {2025 - int(wiek)} urodzin")
+print(zyczenia)
+print(imie_i_nazwisko_nadawcy)
+
