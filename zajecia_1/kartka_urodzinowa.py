@@ -6,4 +6,4 @@ wiek = input("Podaj date urodzenia: ")
 print(imie, nazwisko)
 print(f"Wszystkiego najlepszego z okazji {2025 - int(wiek)} urodzin")
 print(zyczenia)
-print(imie_i_nazwisko_nadawcy)///
+print(imie_i_nazwisko_nadawcy)
