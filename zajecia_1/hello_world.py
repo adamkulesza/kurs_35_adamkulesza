@@ -57,10 +57,11 @@
 # print(wartosc_falszywa)
 
 # wiek_adama = 32
-# wiek_pawla = 15
+# wiek_pawla = 32
+
 # wiek_jest_rozny = wiek_pawla != wiek_adama
 # wiek_jest_rowny = wiek_pawla == wiek_adama
-# # print(wiek_adama == wiek_pawla) #porownanie
+# print(wiek_adama == wiek_pawla) #porownanie
 # # print(wiek_pawla != wiek_adama) #rozne
 # # print(wiek_adama < wiek_pawla) #czy cos jest mniejsze
 # # print(wiek_adama > wiek_pawla) #czy cos jest wieksze
@@ -115,13 +116,13 @@
 # print(bool("0")) #daje True
 
 
-imie = input("Podaj imie jubilata: ")
-nazwisko = input("Podaj nazwisko jubilata: ")
-imie_i_nazwisko_nadawcy = input("podaj imie i nazwisko nadawcy: ")
-zyczenia = input("Wpisz swoje zyczenia: ")
-wiek = input("Podaj date urodzenia: ")
-print(imie, nazwisko)
-print(f"Wszystkiego najlepszego z okazji {2025 - int(wiek)} urodzin")
-print(zyczenia)
-print(imie_i_nazwisko_nadawcy)
+# imie = input("Podaj imie jubilata: ")
+# nazwisko = input("Podaj nazwisko jubilata: ")
+# imie_i_nazwisko_nadawcy = input("podaj imie i nazwisko nadawcy: ")
+# zyczenia = input("Wpisz swoje zyczenia: ")
+# wiek = input("Podaj date urodzenia: ")
+# print(imie, nazwisko)
+# print(f"Wszystkiego najlepszego z okazji {2025 - int(wiek)} urodzin")
+# print(zyczenia)
+# print(imie_i_nazwisko_nadawcy)
 
