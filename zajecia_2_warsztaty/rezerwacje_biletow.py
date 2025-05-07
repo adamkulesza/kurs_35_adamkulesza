@@ -15,7 +15,7 @@ Działanie programu:
 
         Łączną liczbę biletów,
 
-        Kwotę do zapłaty (20 zł za bilet, zniżka do 15 zł za bilet obowiązuje, jeśli liczba osób w grupie jest co najmniej 5 i łączna liczba biletów wynosi co najmniej 10),
+        Kwotę do zapłaty (20 zł za bilet, zniżka do 15 zł za bilet obowiązuje, jeśli liczba transakcji bedzie wieksza od 5 i łączna liczba biletów wynosi co najmniej 10),
 
         Największą pojedynczą transakcję biletową,
 
@@ -59,3 +59,28 @@ Kwota do zapłaty: 100 zł
 Największa transakcja: 5
 Liczba błędnych wpisów: 1
 """
+
+liczba_osob = int(input("Podaj liczbe osob w grupie: "))
+laczna_liczba_biletow = 0
+najwieksza_liczba_biletow_w_tranzakcji = 0
+tranzakcja_z_najwieksza_iloscia_biletow = None
+for tranzakcja in range(liczba_osob):
+    liczba_biletow_w_tranzakcji = int(input(f"Podaj liczbe biletow dla osoby {tranzakcja +1}: "))
+    if liczba_biletow_w_tranzakcji < 1 or liczba_biletow_w_tranzakcji > 5:
+        print("Nieprawidlowa wartosc. Wprowadzanie danych zakonczone.")
+        break
+    laczna_liczba_biletow += liczba_biletow_w_tranzakcji
+    if liczba_biletow_w_tranzakcji > najwieksza_liczba_biletow_w_tranzakcji:
+        najwieksza_liczba_biletow_w_tranzakcji = liczba_biletow_w_tranzakcji
+        tranzakcja_z_najwieksza_iloscia_biletow = tranzakcja + 1
+if liczba_osob >= 5 and laczna_liczba_biletow >= 10:
+    cena_biletu = 15
+    print("Cena pojedynczego biletu wynosi 15 zl - Masz zniszke 25%")
+else:
+    cena_biletu = 20
+    print("Cena pojedynczego biletu wynosi 20 zl")
+
+print(f"Liczba biletow: {laczna_liczba_biletow}")
+print(f"Laczna cena biletow to: {laczna_liczba_biletow * cena_biletu} zl.")
+print(f"Najwieksza tranzakcja to: {najwieksza_liczba_biletow_w_tranzakcji}")
+print(f"Transakcja z najwieksza iloscia biletow: {tranzakcja_z_najwieksza_iloscia_biletow}")

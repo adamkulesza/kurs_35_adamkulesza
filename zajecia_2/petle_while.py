@@ -41,7 +41,7 @@ print("tu trafiamy po breaku!!")
 #
 # while wiek < 65:
 #     wiek += 1
-#     if wiek == 18:
+#     if wiek == 18 or wiek == 25:
 #         print("Masz 18 lat!")
 #         continue #operacja ktora wywoluje kolejna iteracje petli
 #     print(f"nie powinienes byc na emeryturze! Masz {wiek} lat.")

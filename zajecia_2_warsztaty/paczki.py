@@ -67,7 +67,6 @@ waga_wszystkich_elementow = 0
 
 for element in range(ilosc_elementow):
     waga_elementu = float(input(f"Podaj wage elementu {element + 1}: "))
-
     if waga_paczki + waga_elementu > 20:
         print("Przekroczona waga paczki. Skladamy kolejna paczke")
         if 20 - waga_paczki < paczka_z_najwieksza_pusta_waga:
