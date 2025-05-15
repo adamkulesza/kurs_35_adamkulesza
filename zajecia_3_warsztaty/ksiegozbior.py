@@ -54,7 +54,7 @@ lista_ksiazek = [{
         "autor": "Fiodor Dostojewski",
         "rok_wydania": 1866,
         "cena": 29.99,
-        "ilosc_na_stanie": 0,
+        "ilosc_na_stanie": 2,
         "kategoria": "klasyka",
         "ilosc": 2,
         "ISBN": "978-3-14-044913-6",
@@ -87,7 +87,6 @@ while True:
             isbn = input("Podaj nr. ISBN ksiazki do wypozyczenia: ")
             ksiazka_znaleziona = False
             for ksiazka in lista_ksiazek:
-                ksiazka_znaleziona = True
                 if ksiazka.get("ISBN") == isbn:
                     if ksiazka["ilosc_na_stanie"] <= 0:
                         print("Nie ma tej ksiazki na stanie")
@@ -96,9 +95,12 @@ while True:
                     saldo += 10 # koszt wypozyczenia ksiazki
                     historia.append(f"Wypozyczenie ksiazki: {ksiazka['tytul']}, wartosc ksiazki {ksiazka['autor']}, sztuk 1")
                     print(f"Wypozyczenie ksiazki: {ksiazka['tytul']}, {ksiazka['autor']}, sztuk 1")
+                    ksiazka_znaleziona = True
                     break
             if not ksiazka_znaleziona:
                 print("Taka ksiazka nie istnieje w ksiegozbiorze")
+            for index, element in enumerate(lista_ksiazek):
+                print(f"Lista Ksiazek: Ksiazka {index + 1} na liscie ksiazek to: {element}")
         case "3":
             tytul = input("Podaj tytul ksiazki: ")
             autor = input("Podaj autora ksiazki: ")
@@ -148,13 +150,12 @@ while True:
             isbn = input("Podaj nr. ISBN ksiazki do wyszukania: ")
             ksiazka_znaleziona = False
             for ksiazka in lista_ksiazek:
-                ksiazka_znaleziona = True
                 if ksiazka.get("ISBN") == isbn:
+                    ksiazka_znaleziona = True
                     if ksiazka["ilosc_na_stanie"] <= 0:
                         print("Nie ma tej ksiazki na stanie")
                         break
-                    ksiazka["ilosc_na_stanie"] -= 1
-                    print(f"Ksiazka: {ksiazka['tytul']}, {ksiazka['autor']}, istnieje na stanie")
+                    print(f"Ksiazka: {ksiazka['tytul']}, {ksiazka['autor']}, {ksiazka['ilosc_na_stanie']} sztuk istnieje na stanie")
                     break
             if not ksiazka_znaleziona:
                 print("Taka ksiazka nie istnieje w ksiegozbiorze")
