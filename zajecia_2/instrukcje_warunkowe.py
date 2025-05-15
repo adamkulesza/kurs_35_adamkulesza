@@ -39,23 +39,23 @@
 
 
 ##########
-print("symulacja sklepu zabka: ")
-print("witaj w sklepie Żabka!")
-
-nazwa_produktu = input("Podaj nazwe produktu: ")
-cena_produktu = float(input("Podaj cene produktu: "))
-
-if nazwa_produktu.lower() == "piwo" or nazwa_produktu.lower() == "papierosy" or nazwa_produktu.lower() == "energetyk" or nazwa_produktu.lower() == "alkohol wysokoprocentowy":
-    print("Ten produkt jest przeznaczony dla osob pelnoletnich!")
-    wiek_klienta = int(input("Podaj swoj wiek: "))
-    if wiek_klienta >= 18:
-        print("Masz 18 lat - mozesz kupic ten produkt.")
-        print(f"Kupiłes produkt: {nazwa_produktu} za cene: {cena_produktu} zl")
-    else:
-        print("Nie mozesz kupić tego produktu - produkt dla pelnoletnich")
-else:
-    print("Ten produkt nie wymaga podania wieku")
-    print(f"Kupiłes produkt: {nazwa_produktu} za cene: {cena_produktu} zl")
+# print("symulacja sklepu zabka: ")
+# print("witaj w sklepie Żabka!")
+#
+# nazwa_produktu = input("Podaj nazwe produktu: ")
+# cena_produktu = float(input("Podaj cene produktu: "))
+#
+# if nazwa_produktu.lower() == "piwo" or nazwa_produktu.lower() == "papierosy" or nazwa_produktu.lower() == "energetyk" or nazwa_produktu.lower() == "alkohol wysokoprocentowy":
+#     print("Ten produkt jest przeznaczony dla osob pelnoletnich!")
+#     wiek_klienta = int(input("Podaj swoj wiek: "))
+#     if wiek_klienta >= 18:
+#         print("Masz 18 lat - mozesz kupic ten produkt.")
+#         print(f"Kupiłes produkt: {nazwa_produktu} za cene: {cena_produktu} zl")
+#     else:
+#         print("Nie mozesz kupić tego produktu - produkt dla pelnoletnich")
+# else:
+#     print("Ten produkt nie wymaga podania wieku")
+#     print(f"Kupiłes produkt: {nazwa_produktu} za cene: {cena_produktu} zl")
 
 
 ############ elif
@@ -76,22 +76,22 @@ else:
 #     print(f"Do twojej emerytury zostalo {65 - wiek} lat.")
 
 ############################ mach_case (nie dziala na zakresach (case < 20 - taki zapis nie zadziala a zadziala - case 20)
-zawod = input("Podaj mi swoj zawod: ")
-wiek = int(input("Podaj mi swoj wiek: "))
-
-match (zawod):
-    case "policjant":
-        print(f"Do emerytury zostalo Ci {45 - wiek} lat.")
-    case "zolnierz":
-        print(f"Do emerytury zostalo Ci {50 - wiek} lat.")
-    case "nauczyciel":
-        print(f"Do emerytury zostalo Ci {60 - wiek} lat.")
-    case "praca biurowa":
-        print(f"Do emerytury zostalo Ci {65 - wiek} lat.")
-    case "programista":
-        print("nie dla ciebie emerytura")
-    case _:
-        print(f"Do twojej emerytury prawdopodobmnie zostalo Ci {65 - wiek} lat.")
+# zawod = input("Podaj mi swoj zawod: ")
+# wiek = int(input("Podaj mi swoj wiek: "))
+#
+# match (zawod):
+#     case "policjant":
+#         print(f"Do emerytury zostalo Ci {45 - wiek} lat.")
+#     case "zolnierz":
+#         print(f"Do emerytury zostalo Ci {50 - wiek} lat.")
+#     case "nauczyciel":
+#         print(f"Do emerytury zostalo Ci {60 - wiek} lat.")
+#     case "praca biurowa":
+#         print(f"Do emerytury zostalo Ci {65 - wiek} lat.")
+#     case "programista":
+#         print("nie dla ciebie emerytura")
+#     case _:
+#         print(f"Do twojej emerytury prawdopodobmnie zostalo Ci {65 - wiek} lat.")
 
 
 ############
