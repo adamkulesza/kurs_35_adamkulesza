@@ -4,7 +4,7 @@
 ## klucze w naszych slownikach musza miec okreslony typ bo musza byc unikalne
 
 uzytkownik = {
-    #"klucz": "wartosc",
+    # "klucz": "wartosc",
     "imie": "Michal",
     "nazwisko": "zietkowski",
     "wiek": 20,
@@ -16,15 +16,14 @@ uzytkownik = {
 # jak zachowac ta unikalnosc?? - te struktury ktore moga byc kluczami moga byc tylko NIEMUTOWALNE i haszowalna.
 
 uzytkownik_1 = {
-    #"klucz": "wartosc",
+    # "klucz": "wartosc",
     "imie": "Michal",
     "nazwisko": "Zietkowski",
     "wiek": 20,
     "czy_uczen": True,
-    "imie": "Adam"
+    "imie": "Adam",
 }
 print(uzytkownik_1)
-
 
 
 ##### jak pobierac wartosci ze slownika??? - wpisujac odpowiedni klucz - jezeli wpiszemy nieistniejacy klucz to wyskoczy nam KeyError
@@ -39,7 +38,7 @@ for element in uzytkownik_1:
     print(element)
 
 ## operacja dodawania <kluczy> i <wartosci kluczy> - nowy klucz jest dodawany na koncu slownika
-            #klucz      wartosc klucza
+# klucz      wartosc klucza
 uzytkownik_1["plec"] = "mezczyzna"
 print(uzytkownik_1)
 
@@ -56,16 +55,16 @@ print(uzytkownik_1)
 
 
 ##################iteracje w slownikach
-for item in uzytkownik_1: #poznajemy nazwy kluczy
+for item in uzytkownik_1:  # poznajemy nazwy kluczy
     print(item)
 
-for key in uzytkownik_1.keys(): #poznajemy nazwy kluczy
+for key in uzytkownik_1.keys():  # poznajemy nazwy kluczy
     print(key)
 
-for value in uzytkownik_1.values(): #poznajemy wartosc kluczy
+for value in uzytkownik_1.values():  # poznajemy wartosc kluczy
     print(value)
 
-for key, value in uzytkownik_1.items(): #poznajemy zarowno klucz jak i wartosc
+for key, value in uzytkownik_1.items():  # poznajemy zarowno klucz jak i wartosc
     print(f"{key}: {value}")
 
 

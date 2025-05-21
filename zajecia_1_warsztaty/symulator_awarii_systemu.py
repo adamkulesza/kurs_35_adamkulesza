@@ -31,9 +31,14 @@ aplikacja_web_dziala = aplikacja_web == "tak"
 
 # print("Awaria Krytyczna" * (not serwer_dziala and not baza_danych_dziala) + "Awaria czesciowa" * (not serwer_dziala or not baza_danych_dziala or not aplikacja_web_dziala))
 
-print("Natychmiastowa interwencja - Awaria Krytyczna" * (not serwer_dziala and not baza_danych_dziala)
-      or "Awaria czesciowa - sprawdz system" * (not serwer_dziala or not baza_danych_dziala or not aplikacja_web_dziala)
-      + "System dziala poprawnie" * (serwer_dziala and baza_danych_dziala and aplikacja_web_dziala))
+print(
+    "Natychmiastowa interwencja - Awaria Krytyczna"
+    * (not serwer_dziala and not baza_danych_dziala)
+    or "Awaria czesciowa - sprawdz system"
+    * (not serwer_dziala or not baza_danych_dziala or not aplikacja_web_dziala)
+    + "System dziala poprawnie"
+    * (serwer_dziala and baza_danych_dziala and aplikacja_web_dziala)
+)
 
 
 ######### instruktor w cwiczeniu troche pomieszal za bardzo ##########

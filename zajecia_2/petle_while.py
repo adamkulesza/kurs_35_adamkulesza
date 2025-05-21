@@ -29,7 +29,7 @@ imie = input("Podaj swoje imie: ")
 while True:
     if imie == "Michal":
         print("Czesc Michal!")
-        break # komenda przerywajaca wykonanie petli i wyjscie zupelnie z calosci petli
+        break  # komenda przerywajaca wykonanie petli i wyjscie zupelnie z calosci petli
         print("kod po breaku")
     else:
         imie = input("Podaj swoje imie: ")

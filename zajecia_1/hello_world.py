@@ -16,6 +16,12 @@
 # print(modulo_z_dzielenia)
 
 
+##########Aby zaokraglic jakiegos floata tobimy to w nastepujacy sposob
+x = 10 / 3
+print(x)
+print(round(x, 2))  #### najczesciej stosowany sposob zaokraglania
+print(f"{x:.2f}")
+
 ################## STRINGS (wartosci tekstowe) #######################
 ########znienne typu slowa##########
 
@@ -125,4 +131,3 @@
 # print(f"Wszystkiego najlepszego z okazji {2025 - int(wiek)} urodzin")
 # print(zyczenia)
 # print(imie_i_nazwisko_nadawcy)
-

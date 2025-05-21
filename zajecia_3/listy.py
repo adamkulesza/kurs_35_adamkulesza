@@ -13,9 +13,11 @@ print(lista_produktow_na_zakupy)
 # listy sa indeksowalne - kolejnosc jest po cos - kolejnosc ma znaczenie - kazdy element z listy ma swoj indeks
 # i mozemy podajac indeks uzyskac konkretna informacje o elemencie z tej listy, ktory ma ten indeks
 # indeksujemy od lewej - 0, 1, 2, 3 itd.
-jablka = lista_produktow_na_zakupy[0] # w nawiasie kwadratowym [] podany jest indeks danej pozycji z listy
+jablka = lista_produktow_na_zakupy[
+    0
+]  # w nawiasie kwadratowym [] podany jest indeks danej pozycji z listy
 print(jablka)
-#jezeli bedziemy chcieli wpisac indeks ktory nie istnieje w naszej liscie np(4) to wyskoczy nam blad
+# jezeli bedziemy chcieli wpisac indeks ktory nie istnieje w naszej liscie np(4) to wyskoczy nam blad
 
 
 ######## LISTA DRUGI SPOSOB ######################
@@ -33,21 +35,20 @@ lista_produktow_na_zakupy.append("jajka")
 print(lista_produktow_na_zakupy)
 
 
-
 ###############innym sposobem dodawania jest operacja .insert - precyzujemy w ktory indeks wrzucic (int) i co mamy wrzucic
 # jednakze, wowczas program musi przesunac wszystkie obiekty na inne indeksy co jest czasochlonne i moze
 # nie byc oplacalne
-lista_produktow_na_zakupy.insert(0,"mąka")
+lista_produktow_na_zakupy.insert(0, "mąka")
 print(lista_produktow_na_zakupy)
 
 
-
 ############### przeszukiwanie listy po indeksie i wyszukiwanie wartosci danego indexu
-print(lista_produktow_na_zakupy.index("banany")) # tak znajdujemy index danego obiektu w liscie
-index_banany = lista_produktow_na_zakupy.index("banany") #
+print(
+    lista_produktow_na_zakupy.index("banany")
+)  # tak znajdujemy index danego obiektu w liscie
+index_banany = lista_produktow_na_zakupy.index("banany")  #
 banany = lista_produktow_na_zakupy[index_banany]
 print(banany)
-
 
 
 ######### listy sa obiektami iterowalnymi

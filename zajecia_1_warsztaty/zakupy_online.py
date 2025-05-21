@@ -31,7 +31,6 @@ Wyswietl "twoj rabat wynosi x%" bez ifow.
 # rabat = 0.15 * (zamowienie_powyzej_100 or klient_vip) + 0.05 * produkt_promocyjny
 # print(f"Twoj rabat wynosi {rabat * 1:.0%}")
 
-
 ############################# inaczej zrobione zadanie ########
 zamowienie = float(input("Podaj cene swojego zamowienia: "))
 

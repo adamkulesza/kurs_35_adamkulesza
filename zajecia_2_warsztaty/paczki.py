@@ -81,5 +81,6 @@ for element in range(ilosc_elementow):
 
 print(f"Waga wszystkich paczek wynosi: {waga_wszystkich_elementow} kg")
 print(f"Wyslano {ilosc_paczek} packi")
-print(f"Paczka z najwieksza pusta waga to paczna nr. {numer_paczki_z_najwieksza_pusta_waga}")
-
+print(
+    f"Paczka z najwieksza pusta waga to paczna nr. {numer_paczki_z_najwieksza_pusta_waga}"
+)

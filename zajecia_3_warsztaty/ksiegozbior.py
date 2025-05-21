@@ -28,8 +28,8 @@ Funkcje po wywołaniu danych komend są następujące:
 # bedziemy dzialali w petli - while True:
 # lista ksiazek - lista wszystkich ksiazek gdzie kazda ksiazka jest slownikiem
 
-
-lista_ksiazek = [{
+lista_ksiazek = [
+    {
         "tytul": "Harry Potter i Kamien Filozoficzny",
         "autor": "J.K. Rowling",
         "rok_wydania": 1999,
@@ -58,13 +58,18 @@ lista_ksiazek = [{
         "kategoria": "klasyka",
         "ilosc": 2,
         "ISBN": "978-3-14-044913-6",
-    }
+    },
 ]
 saldo = 10000
-historia = ["Sprzedaz ksiazki: Harry Potter i Kamien Filozoficzny, 39.99 5 sztuk", "Zakup ksiazki: Wladca Pierscieni: Druzyna Pierscienia, 49.99, 3 sztuki"]
+historia = [
+    "Sprzedaz ksiazki: Harry Potter i Kamien Filozoficzny, 39.99 5 sztuk",
+    "Zakup ksiazki: Wladca Pierscieni: Druzyna Pierscienia, 49.99, 3 sztuki",
+]
 print("Witaj w systemie zarzadzania ksiegozbiorem bibliotecznym!")
 while True:
-    print("Wybierz jedna z ponizszych opcji (podajac tylko cyfre figurujaca przy danej opcj): ")
+    print(
+        "Wybierz jedna z ponizszych opcji (podajac tylko cyfre figurujaca przy danej opcj): "
+    )
     komenda = input("""
         1. Doladowanie
         2. Wypozycz
@@ -79,7 +84,9 @@ while True:
         case "1":
             kwota = float(input("Podaj kwote o jaka chcesz zmienic saldo: "))
             if saldo + kwota < 0:
-                print("Nie mozesz wykonac tej operacji i ustawic salda na wartosci ujemne.")
+                print(
+                    "Nie mozesz wykonac tej operacji i ustawic salda na wartosci ujemne."
+                )
             else:
                 saldo += kwota
             print(f"Saldo wynosi: {saldo}")
@@ -92,15 +99,21 @@ while True:
                         print("Nie ma tej ksiazki na stanie")
                         break
                     ksiazka["ilosc_na_stanie"] -= 1
-                    saldo += 10 # koszt wypozyczenia ksiazki
-                    historia.append(f"Wypozyczenie ksiazki: {ksiazka['tytul']}, wartosc ksiazki {ksiazka['autor']}, sztuk 1")
-                    print(f"Wypozyczenie ksiazki: {ksiazka['tytul']}, {ksiazka['autor']}, sztuk 1")
+                    saldo += 10  # koszt wypozyczenia ksiazki
+                    historia.append(
+                        f"Wypozyczenie ksiazki: {ksiazka['tytul']}, wartosc ksiazki {ksiazka['autor']}, sztuk 1"
+                    )
+                    print(
+                        f"Wypozyczenie ksiazki: {ksiazka['tytul']}, {ksiazka['autor']}, sztuk 1"
+                    )
                     ksiazka_znaleziona = True
                     break
             if not ksiazka_znaleziona:
                 print("Taka ksiazka nie istnieje w ksiegozbiorze")
             for index, element in enumerate(lista_ksiazek):
-                print(f"Lista Ksiazek: Ksiazka {index + 1} na liscie ksiazek to: {element}")
+                print(
+                    f"Lista Ksiazek: Ksiazka {index + 1} na liscie ksiazek to: {element}"
+                )
         case "3":
             tytul = input("Podaj tytul ksiazki: ")
             autor = input("Podaj autora ksiazki: ")
@@ -110,42 +123,60 @@ while True:
             numer_isbn = input("Podaj numer ISBN ksiazki: ")
             rok_wydania = int(input("Podaj rok wydania ksiazki: "))
             if saldo - (koszt * ilosc) < 0:
-                print("Nie mozemy dokonac tego zakupu - wartosc zakupu przekracza wartosc salda.")
-                historia.append(f"Proba zakupu ksiazki: {tytul}, {koszt}, {ilosc} sztuk - nieudana")
+                print(
+                    "Nie mozemy dokonac tego zakupu - wartosc zakupu przekracza wartosc salda."
+                )
+                historia.append(
+                    f"Proba zakupu ksiazki: {tytul}, {koszt}, {ilosc} sztuk - nieudana"
+                )
                 continue
             else:
-                saldo -= (koszt * ilosc)
-            znaleziono_ksiazke = False # dodanie obiektu juz istniejacego na liscie
-            for ksiazka in lista_ksiazek: # dodanie obiektu juz istniejacego na liscie
-                if ksiazka.get("ISBN") == numer_isbn: # dodanie obiektu juz istniejacego na liscie
-                    znaleziono_ksiazke = True # dodanie obiektu juz istniejacego na liscie
-                    ksiazka["ilosc_na_stanie"] += ilosc # dodanie obiektu juz istniejacego na liscie
-                    break # dodanie obiektu juz istniejacego na liscie
-            if not znaleziono_ksiazke: # dodanie obiektu juz istniejacego na liscie
-                lista_ksiazek.append({
-                    "tytul": tytul,
-                    "autor": autor,
-                    "cena": koszt,
-                    "ilosc_na_stanie": ilosc,
-                    "ilosc": ilosc,
-                    "kategoria": kategoria,
-                    "ISBN": numer_isbn,
-                    "rok_wydania": rok_wydania
-                })
+                saldo -= koszt * ilosc
+            znaleziono_ksiazke = False  # dodanie obiektu juz istniejacego na liscie
+            for ksiazka in lista_ksiazek:  # dodanie obiektu juz istniejacego na liscie
+                if (
+                    ksiazka.get("ISBN") == numer_isbn
+                ):  # dodanie obiektu juz istniejacego na liscie
+                    znaleziono_ksiazke = (
+                        True  # dodanie obiektu juz istniejacego na liscie
+                    )
+                    ksiazka["ilosc_na_stanie"] += (
+                        ilosc  # dodanie obiektu juz istniejacego na liscie
+                    )
+                    break  # dodanie obiektu juz istniejacego na liscie
+            if not znaleziono_ksiazke:  # dodanie obiektu juz istniejacego na liscie
+                lista_ksiazek.append(
+                    {
+                        "tytul": tytul,
+                        "autor": autor,
+                        "cena": koszt,
+                        "ilosc_na_stanie": ilosc,
+                        "ilosc": ilosc,
+                        "kategoria": kategoria,
+                        "ISBN": numer_isbn,
+                        "rok_wydania": rok_wydania,
+                    }
+                )
                 # print(f"Lista ksiazek: {lista_ksiazek}")
-                saldo -= (koszt * ilosc)
+                saldo -= koszt * ilosc
                 historia.append(f"Zakupiono ksiazke: {tytul}, {koszt}, {ilosc} sztuk")
                 for index, element in enumerate(lista_ksiazek):
-                    print(f"Lista Ksiazek: Ksiazka {index + 1} na liscie ksiazek to: {element}")
+                    print(
+                        f"Lista Ksiazek: Ksiazka {index + 1} na liscie ksiazek to: {element}"
+                    )
                 for index, element in enumerate(historia):
-                    print(f"Historia Tranzakcji - Ksiazka {index + 1} w historii zakupow to: {element}")
+                    print(
+                        f"Historia Tranzakcji - Ksiazka {index + 1} w historii zakupow to: {element}"
+                    )
                 # print(f"Historia zakupow: {historia}")
                 print(f"Saldo po zakupie ksiazki '{tytul}' wynosi {saldo} zl")
         case "4":
             print(f"W kasie jest {saldo} zl")
         case "5":
             for index, element in enumerate(lista_ksiazek):
-                print(f"Zestawienie Ksiazek: Ksiazka {index + 1} w zestawieniu ksiazek to: {element}")
+                print(
+                    f"Zestawienie Ksiazek: Ksiazka {index + 1} w zestawieniu ksiazek to: {element}"
+                )
         case "6":
             isbn = input("Podaj nr. ISBN ksiazki do wyszukania: ")
             ksiazka_znaleziona = False
@@ -155,7 +186,9 @@ while True:
                     if ksiazka["ilosc_na_stanie"] <= 0:
                         print("Nie ma tej ksiazki na stanie")
                         break
-                    print(f"Ksiazka: {ksiazka['tytul']}, {ksiazka['autor']}, {ksiazka['ilosc_na_stanie']} sztuk istnieje na stanie")
+                    print(
+                        f"Ksiazka: {ksiazka['tytul']}, {ksiazka['autor']}, {ksiazka['ilosc_na_stanie']} sztuk istnieje na stanie"
+                    )
                     break
             if not ksiazka_znaleziona:
                 print("Taka ksiazka nie istnieje w ksiegozbiorze")

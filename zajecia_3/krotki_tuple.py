@@ -1,12 +1,14 @@
-#Krotki sa po to zeby ograniczyc mozliwosc jakiejs modyfikacji dla uzytkownika
+# Krotki sa po to zeby ograniczyc mozliwosc jakiejs modyfikacji dla uzytkownika
 
 ####podstawowa struktura krotki
 ##pierwszy sposob robienia tuple/krotki
 imiona = ("Jan", "Anna", "Tomasz", "Przemek", "Piotr", "Ewa")
-print(type(imiona)) #aby poznac typ danej wartosci uzywamy funkcji <type>
+print(type(imiona))  # aby poznac typ danej wartosci uzywamy funkcji <type>
 print(id(imiona))
 ##### tuple sa tez indeksowalne
-print(imiona[0]) #chcemy poznac wartosc indeksu [0] - wartosc indeksu [0] naszego tupla to "jan"
+print(
+    imiona[0]
+)  # chcemy poznac wartosc indeksu [0] - wartosc indeksu [0] naszego tupla to "jan"
 
 ##drugi sposob robienie krotek
 plcie = "mezczyzna", "kobieta"

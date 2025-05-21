@@ -33,7 +33,7 @@ print(wiek)
 # wiek = wiek * 2
 # print(wiek)
 
-wiek += 1 #to jest taki sam zapis jak wiek = wiek + 1
+wiek += 1  # to jest taki sam zapis jak wiek = wiek + 1
 print(wiek)
 
 moje_imie = "Adam"

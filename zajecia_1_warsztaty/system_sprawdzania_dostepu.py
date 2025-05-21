@@ -43,5 +43,7 @@ haslo = haslo.lower() == "admin123"
 pracowkik = input("Czy jestes pracownikiem? (tak/nie): ")
 pracownik = pracowkik.lower() == "tak"
 
-print("Dostep przyznany" * (prawidlowy_wiek and haslo or pracownik)
-      + "Dostep zabroniony" *  (not pracownik))
+print(
+    "Dostep przyznany" * (prawidlowy_wiek and haslo or pracownik)
+    + "Dostep zabroniony" * (not pracownik)
+)

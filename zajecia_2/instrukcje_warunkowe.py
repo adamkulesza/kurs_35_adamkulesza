@@ -20,7 +20,6 @@
 #     print("Nie mozesz kupic tego produktu! Produkt dla pelnoletnich")
 
 
-
 ################# else
 # print("symulacja sklepu zabka: ")
 # print("witaj w sklepie Żabka!")
