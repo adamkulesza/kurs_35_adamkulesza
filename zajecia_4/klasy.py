@@ -113,8 +113,6 @@ class Ksiazka:
 
     def __str__(self):
         return f"{self.nazwa} ({self.rok_wydania}) - {self.autor} [{self.gatunek}]"  # druga z takich specjalnych metod
-
-
 #                                                                                   wykonywana kiedy bedziemy printowani
 #                                                                                   nasza ksiazke zebyscie wiedzieli co
 # przypadkowa nazwa = nazwa klasy                                                    jest czym
