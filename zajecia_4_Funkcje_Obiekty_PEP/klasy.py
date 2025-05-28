@@ -111,7 +111,7 @@ class Ksiazka:
         self.rok_wydania = rok_wydania
         self.gatunek = gatunek
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.nazwa} ({self.rok_wydania}) - {self.autor} [{self.gatunek}]"  # druga z takich specjalnych metod
 #                                                                                   wykonywana kiedy bedziemy printowani
 #                                                                                   nasza ksiazke zebyscie wiedzieli co

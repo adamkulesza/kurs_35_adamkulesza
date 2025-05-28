@@ -1,0 +1,10 @@
+
+<<<<Linijka dodatkowa
++++++Dodatkowa linijka
+Dodatkowa linijka
+
+Linijka dodatkowa
+Dodatkowa linijka
+<<<Dodatkowa linijka
+
+Linijka dodatkowa
