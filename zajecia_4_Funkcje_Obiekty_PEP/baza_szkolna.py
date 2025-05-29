@@ -109,6 +109,7 @@ def wyszukaj_wychowawce_klasy(numer_klasy):
 ####### 2
 def wyszukaj_nauczyciela_ucznia(imie, nazwisko):
     numer_klasy_ucznia = None
+    znalezieni_nauczyciele = []
     for uczen in Szkola.get("uczniowie"):
         if uczen.imie == imie and uczen.nazwisko == nazwisko:
             numer_klasy_ucznia = uczen.klasa
@@ -116,7 +117,8 @@ def wyszukaj_nauczyciela_ucznia(imie, nazwisko):
     if numer_klasy_ucznia:
         for nauczyciel in Szkola.get("nauczyciele"):
             if numer_klasy_ucznia in nauczyciel.klasa_nauczyciela:
-                return nauczyciel.przedmiot
+                znalezieni_nauczyciele.append(nauczyciel)
+    return znalezieni_nauczyciele
 
 ####### 3
 def wyszukaj_numery_klas_nauczyciela(imie, nazwisko):
