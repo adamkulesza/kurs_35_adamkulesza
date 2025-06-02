@@ -1,0 +1,32 @@
+[
+    {
+        "nazwa": "kawa",
+        "cena": 10.99,
+        "ilosc_na_stanie": 2,
+        "ilosc": 300
+    },
+    {
+        "nazwa": "herbata",
+        "cena": 5.99,
+        "ilosc_na_stanie": 200,
+        "ilosc": 500
+    },
+    {
+        "nazwa": "maka",
+        "cena": 7.5,
+        "ilosc_na_stanie": 500,
+        "ilosc": 2000
+    },
+    {
+        "nazwa": "proszek_do_pieczenia",
+        "cena": 2.5,
+        "ilosc_na_stanie": 100,
+        "ilosc": 200
+    },
+    {
+        "nazwa": "lizaki",
+        "cena": 5.0,
+        "ilosc_na_stanie": 100,
+        "ilosc": 100
+    }
+]

@@ -66,7 +66,7 @@ class FileHandler:
 
 # 2 rzecz - Nastepnie aby zapisac ten nasz stan w momencie zamkniecia programu ksiegozbior.py musimy wykonac defakto 6 rzeczy
 # - musimy byc pewni ze trzy wartosci w pliku file_handlet.ksiegozbior, file_handler.saldo i file_handler.historia sa takie same jak w pliku ksiegozbior.py
-# wobec tego n akoncu pliku ksiegozbior.py piszemy
+# wobec tego na koncu pliku ksiegozbior.py piszemy
 #       file_handler.ksiegozbior = lista_ksiazek
 #       file_handler.saldo = saldo
 #       file_handler.historia = historia
@@ -90,7 +90,7 @@ def save_temporary_data(file_handler, lista_ksiazek, saldo, historia):
     file_handler.save_saldo_file()
     file_handler.save_historia_file()
 
-# w pliku ksiegozbior.py na gurze do importowanego pliku dopisujemy save_temporary_data - powinno to wygladac tak
+# w pliku ksiegozbior.py na gorze do importowanego pliku dopisujemy save_temporary_data - powinno to wygladac tak
 #           from file_handler import file_handler, save_temporary_data
 
 # nastepnie kiedy bedziemy cos dodawali do historii(historia.append) wpisujemy
