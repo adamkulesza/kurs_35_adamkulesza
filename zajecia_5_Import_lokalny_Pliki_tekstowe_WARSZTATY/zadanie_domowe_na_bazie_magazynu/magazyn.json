@@ -28,5 +28,11 @@
         "cena": 5.0,
         "ilosc_na_stanie": 100,
         "ilosc": 100
+    },
+    {
+        "nazwa": "keczup",
+        "cena": 25.0,
+        "ilosc_na_stanie": 100,
+        "ilosc": 100
     }
 ]
