@@ -1,6 +1,6 @@
 # 1. Pierwszy sposob
 
-# import datetime
+import datetime
 #
 # print(datetime.date.today())
 # print(datetime.datetime.today())
@@ -53,3 +53,8 @@ print(obiekt_w_formacie_amerykanskim)
 #       Mozemy tez robic to w druga strone - za amerykanskiego na europejski
 twoja_data_urodzin_po_amerykansku = datetime.strftime(data_urodzin_obiekt, format_amerykanski)
 print(twoja_data_urodzin_po_amerykansku)
+
+######## Tylko data bez godzin - jutro - po usunieciu datetime.timedelta(days=1) otrzymamy dzisiejsza tylko date
+jutro = (datetime.datetime.now() + datetime.timedelta(days=1))
+jutro_data = jutro.date().isoformat()
+print(jutro_data)

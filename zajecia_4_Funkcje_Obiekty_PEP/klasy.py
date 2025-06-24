@@ -4,7 +4,7 @@
 
 
 ###########################################
-# przyklad - do tej pory ksiegarnie modlismy zrobic tak ale gdy ktos chcial dodac kolejna ksiazke i zrobil literowke w
+# przyklad - do tej pory ksiegarnie moglismy zrobic tak ale gdy ktos chcial dodac kolejna ksiazke i zrobil literowke w
 #   kluczu to podczas wyszukiwania danej ksiazk za pomoca funkcji wystepowal blad
 ksiazki = [
     {

@@ -11,10 +11,12 @@
 
 
 ##################################################### datetime
-# import datetime
+import datetime
 #
-# print(f"Obecnie mamy: {datetime.datetime.now()}") ### aby pobrac z biblioteki aktualna date i godzine
-
+print(f"Obecnie mamy: {datetime.datetime.now()}") ### aby pobrac z biblioteki aktualna date i godzine
+print(f"Jutro mamy: {(datetime.datetime.now() + datetime.timedelta(days=1))}") ### aby pobrac z biblioteki jutrzejsza date i godzine
+jutro = (datetime.datetime.now() + datetime.timedelta(days=1))
+print(type(jutro))
 # current_year = datetime.datetime.now().year
 # print(current_year)
 
@@ -26,16 +28,16 @@
 
 
 ########################### inne
-wiek = 20
-print(wiek)
-# wiek = wiek + 1
-
-# wiek = wiek * 2
+# wiek = 20
 # print(wiek)
-
-wiek += 1  # to jest taki sam zapis jak wiek = wiek + 1
-print(wiek)
-
-moje_imie = "Adam"
-moje_imie += "!!!!!!"
-print(moje_imie)
+# # wiek = wiek + 1
+#
+# # wiek = wiek * 2
+# # print(wiek)
+#
+# wiek += 1  # to jest taki sam zapis jak wiek = wiek + 1
+# print(wiek)
+#
+# moje_imie = "Adam"
+# moje_imie += "!!!!!!"
+# print(moje_imie)

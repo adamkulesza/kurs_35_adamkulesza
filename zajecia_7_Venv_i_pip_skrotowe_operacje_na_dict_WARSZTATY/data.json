@@ -1,0 +1,42 @@
+[
+    {
+        "full_name": "Poland",
+        "capital": "Warsaw",
+        "region": "Europe",
+        "subregion": "Central Europe",
+        "population": 37950802,
+        "languages": "Polish",
+        "currency": "Polish z\u0142oty (PLN)",
+        "flag": "https://flagcdn.com/pl.svg"
+    },
+    {
+        "full_name": "Sweden",
+        "capital": "Stockholm",
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 10353442,
+        "languages": "Swedish",
+        "currency": "Swedish krona (SEK)",
+        "flag": "https://flagcdn.com/se.svg"
+    },
+    {
+        "full_name": "Germany",
+        "capital": "Berlin",
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 83240525,
+        "languages": "German",
+        "currency": "Euro (EUR)",
+        "flag": "https://flagcdn.com/de.svg"
+    },
+    {
+        "full_name": "France",
+        "capital": "Paris",
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 67391582,
+        "languages": "French",
+        "currency": "Euro (EUR)",
+        "flag": "https://flagcdn.com/fr.svg"
+    }
+]
