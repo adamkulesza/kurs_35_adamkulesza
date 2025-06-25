@@ -21,10 +21,17 @@
         "longitude": 54.375
     },
     {
-        "location": "Berlin",
+        "location": "Warszawa",
         "searched_date": "2025-06-25",
         "opady_deszczu": 0.0,
-        "latitude": 13.375,
-        "longitude": 52.5
+        "latitude": 21.125,
+        "longitude": 52.25
+    },
+    {
+        "location": "Suwalki",
+        "searched_date": "2025-06-25",
+        "opady_deszczu": 0.0,
+        "latitude": 22.875,
+        "longitude": 54.125
     }
 ]

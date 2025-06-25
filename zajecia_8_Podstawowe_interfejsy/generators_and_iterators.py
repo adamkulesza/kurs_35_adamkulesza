@@ -1,4 +1,5 @@
 # Stworzmy sobie na potrzeby zajec jakas strukture <users> ktora bedzie lista naszych slownikow
+from collections.abc import Iterable, Iterator
 
 users = [{
         "name": "Jan Kowalski",
@@ -162,7 +163,7 @@ for user in generator:
 # workflow. Wiec jezeli chcieli bysmy zarzadzac manualnie tm naszym workflowem nie poprzez pentle <for> ale poprzez
 # wykonywanie reczne tej metody <next>
 
-#przejdz do pliku <generators_example>
+#   przejdz do pliku <generators_example>
 
 
 # Do tego czasu tworzylismy sobie generatory, ktore byly funkcjami. Mozna je bylo zapisywac za pomoca funkcji. Roznily
@@ -175,3 +176,164 @@ for user in generator:
 
 lista_uczniow = ["jan", "Anna", "Piotr", "Kasia", "Tomek", "Ola", "Marek", "Zosia", "Krzysztof", "Ewa"]
 print(type(lista_uczniow))
+
+# jak sobie to wyprintujemy to dowiemy sie ze jest ona lista.
+# Pamietamy ze listy sa obiektami iterowalnymi. wiec jezeli napiszemy:
+
+print(isinstance(lista_uczniow, Iterable))
+
+# to dostaniemy wartosc <True>
+# oprocz obiektow iterowalnych i oprucz generatorow istnieje trzecia rzecz po ktorej mozemy iterowac, sa to:
+
+#                                               iteratory
+
+# Jak takie iteratory tworzymy???
+#                                     Iteratory mozemy tworzyc dwojako:
+
+#                                                   1.
+
+# mozemy scastowac liste uczniow do iteratora. Zeby skastowac liste uczniow do iteratora musimy uzyc instrukcji <iter>
+# kiedy napiszemy:
+#                           lista_iterator = iter(lista_uczniow)
+#                           print(type(lista_iterator))
+#                           print(isinstance(lista_iterator, Iterator))
+#
+# to otrzymamy odpowiedz    <class 'list_iterator'>
+#                           True
+
+lista_iterator = iter(lista_uczniow)
+print(type(lista_iterator))
+print(isinstance(lista_iterator, Iterator))
+
+# Po co my to w ogole robimy?? Robimy my tez po to zebysmy mogli na nich rownie dobrze wykonywac pentle <for>
+
+for item in lista_iterator:
+    print(item)
+
+#                                   Generatory i Iteratory sa iterowalne
+
+# Generator
+# Generator to specjalny rodzaj iteratora, który:
+# sama implementuje protokół iteratora (czyli <__iter__()> i <__next__()> są tworzone automatycznie)
+# używa słowa kluczowego <yield> zamiast return
+# pozwala łatwiej i krócej pisać iteratory
+
+
+# Iterator
+# Iterator to obiekt, który implementuje metody:
+# __iter__() — zwraca obiekt iteratora (zwykle self)
+# __next__() — zwraca następny element lub zgłasza wyjątek StopIteration, gdy elementy się skończą
+
+
+# Kazdy Generator jest Iteratorem - ma StopIteration, ma ta metode <next> pisana w ten sposob
+# nie kazdy Iterator jest generatorem - nie kazdy ma metode <next>, nie kazdy iterator w momencie kiedy bedziemy sobie
+# po nim iterowali bedzie automatycznie mial te mechanike zakonczenia iteracji
+
+
+#                           2. Iteratory mozemy tworzyc za pomoca klasy
+
+
+# metoda magiczna                       __iter__(self)
+# metody magiczne to takie metody, ktorych wywolanie bylo nie jawne - nie musielismy wywolywac metody __init__ tylko ta
+# metoda __init__ sama nam sie dziala w pewnym momencie.
+# ta metoda magiczna __iter__ pozwala nam zwrocenie jakiegos iteratora.
+# Co jest bardzo wazne w metodzie magicznej __iter__ ktrora bedziemy mieli, bedziemy musieli zwrocic iterator <self>
+# jak taki iterator zwrocic - musimy po prostu wykonac __iter__ na <self.data> - moglismy obiektu iterowalne parsowac na iteratory.
+
+class MyIterator:
+    def __init__(self, data: dict):
+        self.data = data
+
+    def __iter__(self):
+        return iter(self.data.items())
+
+# jak teraz zrobimy sobie:
+
+my_iterator = MyIterator({"a": 1, "b": 2, "c": 3}) # slownik
+# next(my_iterator)
+
+# to po uruchomieniu tego programu wyskoczy nam blad <TypeError: 'MyIterator' object is not an iterator>
+
+# ale jezeli zrobimy zamiast <next(my_iterator)> wpiszemy:
+for item in my_iterator:
+    print(item)
+
+# program wyprintuje nam klucze
+# a
+# b
+# c
+# metody <next> nie mamy ale mamy mozliwosc iterowania po ty naszym obiekcie/slowniku
+# jezeli napszemy:
+#                   return iter(self.data.items())
+# to wyprintuje nam
+# ('a', 1)
+# ('b', 2)
+# ('c', 3)
+# jezeli napszemy:
+#                   return iter(self.data.values())
+# to wyprintuje nam
+# 1
+# 2
+# 3
+
+
+# wiec defakto zrobilismy z tego obiekt iterowalny
+#skoro nie mamy domyslnie tej metody next to musimy toa metode napisac - dopisujemy do funkcji na gorze
+
+# 1. sposob stworzenia __next__
+#Aby uzyc metody __next__ musimy stworzyc iterator
+
+# class MyIterator:
+#     def __init__(self, data: dict):
+#         self.data = data
+#         self.iterator = iter(self.data.items()) #### to jest iterator ktory stworzylismy aby nam metoda __next__ dzialala
+#
+#     def __iter__(self):
+#         return self # zwracamy tutaj tylko <self> - mowi nam to to ze my zwracamy ten obiekt - czyli ten obiekt bedzie iteratorem ktory bedziemy zwracali w metodzie iter
+#
+#     def __next__(self):
+#         return next(self.iterator)
+#
+# my_iterator = MyIterator({"a": 1, "b": 2, "c": 3}) # slownik
+#
+# print(next(my_iterator))
+# print(next(my_iterator))
+# print(next(my_iterator))
+# print(next(my_iterator))
+
+# i w taki sposob wykorzystalismy metode __next__ w iteratorze
+
+# 2. sposob stworzenia __next__
+class MyIteratorVersion2:
+    def __init__(self, data: dict):
+        self.data = list(data.items()) # kastowanie do listy naszego slownika
+        self.index = 0  # Poniewaz my nie bedziemy mogli magicznie generowac tego __nexta__ i liczyc na to ze ten __next__
+                        # jest zaimplementowany w innej strukturze. Tutaj nie jestesmy w stanie tego zrobic.
+                        # Wobec tego piszemy sobie metode __iter__
+
+    def __iter__(self):
+        return self # zwracamy obiekt na ktorym iterujemy. Jezeli chcielibysmy wykorzystac metode __next__, jezeli
+                    # chcielibysmy iterowac po tym obiekcie i uzyc ten obiekt jako iterator, a nie iterowac po czyms
+                    # zewnetrznym. Nastepnie robimy sobie metode __next__
+
+    def __next__(self):
+        if self.index < len(self.data): # jezeli <self.index> jest mniejszy od dlugosci <self.data> od dlugosci naszej list
+            result = self.data[self.index] #czyli najpierw bedzie zero (0) (bo tyle wynosi self.index
+            self.index += 1 # nastepnie zwiekszamy nasz index o 1 do momentu kiedy dojdzie do dlugosci naszej self.data
+                            # o tym mowi <if self.index < len(self.data):
+            return result
+
+# na samym dole mozemy dpisac wielokrotnie <print(next(iterator_v2))>
+
+
+
+iterator_v2 = MyIteratorVersion2({"a": 1, "b": 2, "c": 3})
+
+print(iterator_v2.data)
+
+print(next(iterator_v2))
+print(next(iterator_v2))
+print(next(iterator_v2))
+print(next(iterator_v2)) # Po wyprintowaniu tego wyskakuje nam None a nie StopIterationError
+print(next(iterator_v2)) # Po wyprintowaniu tego wyskakuje nam None a nie StopIterationError
+print(next(iterator_v2)) # Po wyprintowaniu tego wyskakuje nam None a nie StopIterationError
