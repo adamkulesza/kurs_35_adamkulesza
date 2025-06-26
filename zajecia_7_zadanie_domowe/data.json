@@ -7,24 +7,10 @@
         "longitude": 54.0
     },
     {
-        "location": "Szczecin",
-        "searched_date": "2025-06-25",
+        "location": "Olecko",
+        "searched_date": "2025-06-26",
         "opady_deszczu": 0.0,
-        "latitude": 14.625,
-        "longitude": 53.375
-    },
-    {
-        "location": "Gdansk",
-        "searched_date": "2025-06-25",
-        "opady_deszczu": 0.0,
-        "latitude": 18.625,
-        "longitude": 54.375
-    },
-    {
-        "location": "Berlin",
-        "searched_date": "2025-06-25",
-        "opady_deszczu": 0.0,
-        "latitude": 13.375,
-        "longitude": 52.5
+        "latitude": 22.5,
+        "longitude": 54.0
     }
 ]

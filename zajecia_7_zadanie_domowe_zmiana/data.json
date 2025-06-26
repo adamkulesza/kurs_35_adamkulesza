@@ -1,18 +1,11 @@
 {
     "Olecko": {
-        "2025-06-25": "Bedzie slonce",
+        "2025-05-25": "Bedzie slonce",
         "2025-06-26": "Bedzie slonce"
     },
     "Szczecin": {
         "2025-06-27": "Bedzie slonce",
         "2025-06-26": "Bedzie slonce",
         "2025-06-25": "Bedzie slonce"
-    },
-    "Praga": {
-        "2025-06-27": "Bedzie padac"
-    },
-    "Stokholm": {
-        "2025-06-26": "Bedzie slonce",
-        "2025-06-27": "Bedzie slonce"
     }
 }

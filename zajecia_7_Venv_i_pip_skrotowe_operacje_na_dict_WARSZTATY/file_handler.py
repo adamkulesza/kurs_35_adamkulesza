@@ -40,3 +40,8 @@ class FileHandler:
                 return country
 
 # przechodzimy do punktu 6. w pliku <countries_selector>
+
+    def __getitem__(self, item):
+        for country in self.data:
+            if country.get("full_name").lower() == item.lower():
+                return country

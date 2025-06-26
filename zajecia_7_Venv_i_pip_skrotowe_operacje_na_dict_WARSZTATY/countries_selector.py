@@ -218,3 +218,5 @@ else:
 # 1. kontynlacja
 # Czego jeszcze brakuje - to zapisywania naszych danych do pliku - wiec tworzymy plik <file_handler>
 # przejdz do punktu 2 w pliku <file_handler>
+
+print(file_handler["poland"])

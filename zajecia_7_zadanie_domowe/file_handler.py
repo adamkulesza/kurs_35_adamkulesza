@@ -25,4 +25,3 @@ class FileHandler:
     #     for dzien in self.data:
     #         if dzien.get("searched_date") == data:
     #             return dzien
-
