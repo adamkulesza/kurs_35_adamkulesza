@@ -1,0 +1,283 @@
+<!--HTML jest to jezyk znacznikow - bedziemy je wykorzystywali do tego zeby przedstawiac jakies elementy na naszej
+stronie. Powstal bardzo dawno temu. I ten HTML bedzie z takich znacznikow sie skladac.
+Jak to bedzie wygladalo? Bedziemy mieli jakis znacznik. Te znaczniki to beda nasze typy, ktore bedziemy gdzies tam
+nazywali. Te znaczniki beda musialy miec okreslone typy, ktore bedziemy musieli im przypisywac. Czyli tak samo jak
+mielismy w pythonie intigery, mielismy stringi, mielismy wartosci bulien itd. Tak w HTML bedziemy mieli znaczniki, ktore
+beda mialy jakies poszczegolne wartosci. O ile w pythonie mielismy duckTyping tak tutaj musimy podawac jakiego typu
+chcieli bysmy zeby ten znacznik byl
+Przyklad-->
+<!--<znacznik>Wartosc znacznika</znacznik>-->
+
+<!--Mozemy tez tak zrobic, ze w znaczniku bedziemy mieli podznaczniki-->
+
+<!--<znacznik>-->
+<!--    <podznacznik>-->
+<!--        <p> To jest paragraf wewnatrz znacznika.</p>-->
+<!--        <div>-->
+<!--            <p>To jest kolejny paragraf wewnatrz podznacznika.</p>-->
+<!--        </div>-->
+<!--        <span>To jest span wewnatrz podznacznika.</span>-->
+<!--    </podznacznik>-->
+<!--</znacznik>-->
+
+
+
+<!--
+head - znajduja sie naglowki, metadane i tutaj bedziemy podlinkowywali pliki css zeby z nich korzystac
+Czesc head zaczyna sie i konczy w taki sposob
+<head>
+</head>
+
+body -  tu dajemy znaczniki ktore bedziemy chcieli zeby pojawialy sie na naszej stronie bedziemy musieli pisac w tej
+sekcji body -  Czesc body zaczyna sie i konczy w taki sposob
+<body>
+</body>
+-->
+<!--Pomimo tego ze ta struktura ma jakies Taby itd itp to te taby w tym miejscu w html nie maja wogole znaczenia
+na przyklad teraz w czesci head mamy:
+
+<head>
+    <meta charset="YTF-8">
+    <title>Title</title>
+</head>
+a mozemy zrobit tak i tak tez bedzie dzialalo:
+
+<head>
+    <meta charset="YTF-8"><title>Title</title>
+</head>
+
+Title w czesci head jest to tytul naszej strony
+-->
+
+<!--Znaczniki naglowkowe - naglowki - beda mialy rozne rozmiary - :
+<h1></h1> - najwiekszy rozmiar naglowka
+<h2></h2> - drugi naglowek co do wielkosci
+<h3></h3> - trzeci co do wielkosci
+<h4></h4> - czwarty co do wielkosci
+<h5></h5> - piaty co do wielkosci
+<h6></h6> - szósty co do wielkosci
+tylko jest szesc rodzajow naglowkow - jezeli wpiszemy olejne to nie zostana one potraktowane jak naglowki tylko zostana
+wpisane jak jedna linijka bez pogrubieia czcionki i bez enterow miedzy nimi.
+Wielkosc fontow bedziemy robili za pomoca css.
+
+Paragrafy - tresc faktyczna z ktorej mozemy skorzystac. Paragrafy zapisujemy w nastepujacy sposob:
+<p>Tresc paragrafu</p>
+
+Kazdy z tych naszych tagow moze miec atrybuty. Niektore z tych tagow beda mialy specyficzne atrybuty np
+<h1 atrybut1="aaaaa" atrybut2="bbbb">Pierwzy najwiekszy naglowek</h1>
+Bedziemy tych atrybutow uzywali kiedy bedziemy korzystali z Bootstrapa, bo on bedzie bazowal na atrybutach klasy.
+css tez bardzo mocno na niektorych atrybutach bedzie dzialal. No i pozwala nam to w momemcie kiedy bedziemy mieli
+podlaczony jakis ciola script, pozwoli nam to na wyciagniecie niektorych rzeczy na podstawie atrybutow, ktore bedziemy
+podawali. Atrybuty moga byc castomowe zrobione przez nas, ale tak samo moga byc specyficzne. Mozna porownac to do tego
+jak tworzylismy sobie klasy i w klasach implementowalismy swoje wlasne metody (<wypelnij_mi_czek>, albo <otworz_mi_plik>)
+ale tez byly metody <__init__>, ktorych uzywalismy poniewaz one mialy jakies faktyczne zachowanie.
+Niektore z tych atrybutow tez beda sie azchowywaly jak metoda <__init__> i beda zmienialy nam zachowanie
+
+Obrazki - wlasnie tutaj <scr=" "> to jest atrybut
+<img src="https://external-preview.redd.it/9_K5NduR7Q2VRkDpzyDPmXhVJBrSbuNF_EKyCouQboI.jpg?width=1080&crop=smart&auto=webp&s=2616c5096065d247dc850351fcac8b822b6e5263">
+
+Linki do innych podstron: moga miec rozna tresc np - tutaj wejsdziesz na strone glowna
+<a href="https://www.vfxadamkulesza.com/">tutaj wejsdziesz na strone glowna</a>
+
+Zeby miec czytelnosc na stronie to musimy zaczac robic <div>
+<div> - to sa tak jakby pojemniki, ktore beda nasze tagi grupowaly w odpowiednie komponenty tak zeby sobie rzeczy
+pogrupowac np.
+<div>
+    <h1>Pierwszy najwiekszy nagłówek</h1>
+    <h2>Drugi nagłówek</h2>
+    <h3>Trzeci nagłówek</h3>
+    <h4>Czwart naglowek</h4>
+    <h5>Piąty nagłówek</h5>
+    <h6>Szósty nagłówek</h6>
+    <h7>Siódmy ......</h7>
+    <h8>Ósmy ......</h8>
+    <h9>Dziewiaty .......</h9>
+    <h10>dziesiaty .......</h10>
+    <p>To jest tresc naszej strony zapisana w paragrafie
+    Ciekawe czy zapisanie z Enterem bedzie dzialalo</p>
+    <p>Dopiero kolejny paragraf uwzglednia Enter</p>
+</div>
+
+
+Unordered list <ul> - tworzenie listy, ktora bedzie sie zaczynala od tych naszych kropeczek
+<div>
+    <ul>
+        <li>Pierwszy element listy</li>
+        <li>Drugi element listy</li>
+        <li>Trzeci element listy</li>
+        <li>Czwarty element listy</li>
+        <li>Piaty element listy</li>
+        <li>Szosty element listy</li>
+    </ul>
+</div>
+
+Ordered lista - lista z numerkami
+<div>
+    <ol>
+        <li>Pierwszy element listy</li>
+        <li>Drugi element listy</li>
+        <li>Trzeci element listy</li>
+        <li>Czwarty element listy</li>
+        <li>Piaty element listy</li>
+        <li>Szosty element listy</li>
+    </ol>
+</div>
+
+Tabele
+<div>
+    <table>
+        <tr>
+            <th>Naglowek_01</th>
+            <th>Naglowek_02</th>
+            <th>Naglowek_03</th>
+        </tr>
+        <tr>
+            <th>Wiersz_01, Komorka_01</th>
+            <th>Wiersz_01, Komorka_02</th>
+            <th>Wiersz_01, Komorka_03</th>
+        </tr>
+        <tr>
+            <th>Wiersz_02, Komorka_01</th>
+            <th>Wiersz_02, Komorka_02</th>
+            <th>Wiersz_02, Komorka_03</th>
+        </tr>
+    </table>
+</div>
+
+Oprocz przedstawiania jakich informacji bedziemy chcieli dzialac w druga strone, czyli bedziemy chcieli tworzyc
+zapytania typu Post (zmienic stan konta, dodac jakis nowy produkt, dodac jakiegos uzytkownika, chcieli bysmy zeby ci
+uzytkownicy naszej aplikacji robili jakieskolwiek operacje, ktore beda wplywaly na stan tego czym bedziemy sie zajmowali)
+Zeby tworzyc takie formulaze ktore nasi urzytkownicy beda chcieli sobie wyswietla, bedziemy musieli skorzystac z <form>
+<form> bedzie zawieral <label></label> i <input></input>
+<label> - to beda nasze teksty
+<input> - miejsce do wpisania
+
+<div>
+    <form>
+        <h3>Formularz dodania uzytkownika</h3>
+        <div>
+            <label> Imie:</label>
+            <input type="text" name="imie" placeholder="Wpisz swoje imie" required>
+        </div>
+    </form>
+</div>
+
+Przyciski
+<button type="submit>Wyslij formularz</button>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="YTF-8">
+    <title>Pierwsze zadanie Adama z HTML</title>
+<!--    podlinkowywanie pliku style.css do pliku html-->
+    <link rel="stylesheet" href="style.css">
+<!--    rel="stylesheet" - mowimy jaki rodzaj pliku to bedzie - w tym przypadku plik ze stylami
+        href="style.css" - podajemy nazwe pliku jaki chcemy podlinkowac-->
+</head>
+<body>
+<div>
+    <h1 id="title_h1" class="title">Pierwszy najwiekszy nagłówek</h1>
+    <h2 id="title_h2" class="title">Drugi nagłówek</h2>
+    <h3>Trzeci nagłówek</h3>
+    <h4>Czwart naglowek</h4>
+    <h5>Piąty nagłówek</h5>
+    <h6>Szósty nagłówek</h6> <!-- ostatni tag naglowkowy -->
+    <h7>Siódmy ......</h7>
+    <h8>Ósmy ......</h8>
+    <h9>Dziewiaty .......</h9>
+    <h10>dziesiaty .......</h10>
+    <p>To jest tresc naszej strony zapisana w paragrafie
+    Ciekawe czy zapisanie z Enterem bedzie dzialalo</p><!--Mimo ze w paragrafie uzylem Enter to nie zostal on tu uwzgledniony-->
+    <p>Dopiero kolejny paragraf uwzglednia Enter</p>
+</div>
+<div>
+    <img src="https://external-preview.redd.it/9_K5NduR7Q2VRkDpzyDPmXhVJBrSbuNF_EKyCouQboI.jpg?width=1080&crop=smart&auto=webp&s=2616c5096065d247dc850351fcac8b822b6e5263">
+    <a href="https://www.vfxadamkulesza.com/">tutaj wejsdziesz na strone glowna vfxadamkulesza.com </a>
+</div>
+<div>
+    <ul>
+        <li>Pierwszy element listy</li>
+        <li>Drugi element listy</li>
+        <li>Trzeci element listy</li>
+        <li>Czwarty element listy</li>
+        <li>Piaty element listy</li>
+        <li>Szosty element listy</li>
+    </ul>
+</div>
+<div>
+    <ol>
+        <li>Pierwszy element listy</li>
+        <li>Drugi element listy</li>
+        <li>Trzeci element listy</li>
+        <li>Czwarty element listy</li>
+        <li>Piaty element listy</li>
+        <li>Szosty element listy</li>
+    </ol>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Naglowek_01</th>
+            <th>Naglowek_02</th>
+            <th>Naglowek_03</th>
+        </tr>
+        <tr>
+            <th><input placeholder="Wpisz"></th>
+            <th><input placeholder="Wpisz"></th>
+            <th><input placeholder="Wpisz"></th>
+        </tr>
+        <tr>
+            <th><input Wiersz_02, Komorka_01></th>
+            <th><input Wiersz_02, Komorka_02></th>
+            <th><input Wiersz_02, Komorka_03></th>
+        </tr>
+    </table>
+</div>
+<div>
+    <form>
+        <h1>Formularz dodania uzytkownika</h1>
+        <div>
+            <label> Imie:</label>
+            <input type="text" name="imie" placeholder="Wpisz swoje imie" required>
+<!--            type="text" - atrybut ten okresla jakich danych sie spodziewamy - spodziewamy sie tekstu
+
+                name="imie" - bedzie to wazne wowczas gdy bedziemy wysylali nasz formulaz do warstwy serverowej, ktora
+                bedzie napisana w aplikacji flask, poniewaz my bedziemy musieli te dane otrzymac i jakos przeparsowac,
+                zeby zapisac je do bazy danych lub zrobic cokolwiek innego, finalnie mane="imie" to bedzie klucz, ktory
+                bedziemy mieli do wartosci
+
+                placeholder="Wpisz swoje imie" - to jest ten domyslny tekst ktory nam sie wyswietla w ramce
+
+                required - bedzie mowil nam o tym ze to pole w tym formularzu jest wymagane (obowiazkowe) i juz na
+                etapie warstwy wizualnej nie bedziemy tego przepuszczac
+                -->
+        </div>
+        <div>
+            <label>Haslo:</label>
+            <input type="password" name="haslo" placeholder="Wpisz swoje haslo" required>
+        </div>
+        <div>
+            <label>Adres e-mail:</label>
+            <input type="email" name="email" placeholder="Wpisz swoj adres e-mail" required>
+        </div>
+        <div>
+            <label>Plec:</label>
+            <select name="plec">
+                <option value="mezczyzna">Mezczyzna</option>
+                <option value="kobieta">Kobieta</option>
+                <option value="inne">Inne</option>
+            </select>
+            <input type="radio" value="mezczyzna" name="plec">
+            <label>Mezczyzna</label>
+            <input type="radio" value="kobieta" name="plec">
+            <label>Kobieta</label>
+            <input type="radio" value="inne" name="plec">
+            <label>Inne</label>
+        </div>
+        <button type="submit">Wyslij formularz</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- Przy tworzeniu poprzedniej strony kazdy z elementow był umieszczony w w czyms takim jak border-box. Nowoczesne
+strony nie korzystaja juz z czegos takiego jak border-box.
+Nowe strony korzystaja z takich dwoch ukladow, a mianowicie  uklad flex i uklad greed
+
+uklad flex - to bedzie uklad elementow, ktory bedzie dzialal tylko i wylacznie jednokierunkowo - bedziemy mogli ukladac
+elementy tylko po jednym okreslonym przez nas kierunku. Bedzie nam pozwalal w miare skladnie i rozsadnie te elementy
+wobec siebie kierunkowac, tylko i wylacznie na jednej z naszych osi (x lub y) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex view</title>
+    <link rel="stylesheet" href="flex_css.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+</html>

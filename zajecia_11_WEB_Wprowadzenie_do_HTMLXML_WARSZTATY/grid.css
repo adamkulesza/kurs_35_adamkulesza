@@ -1,0 +1,18 @@
+.grid-container {
+    display: grid;
+    gap: 10px;
+    /*grid-template-rows: 10px, 50px, 100px; /*bedziemy mieli 3 rzedy - pisac z przecinkami
+    Aby nie ograniczac sie pixelami mozemy uzyc funkcji repeat wowczas napiszemy*/
+    grid-template-rows: repeat(3, 33%); /*Zamiast pisac 33% mozemy napisac 1fr (jedna frakcja) wowczas przegladarka podzieli na 3 rowne czesci*/
+    /*grid-template-columns: 100px 200px 300px; /*bedziemy mieli 3 kolumny - podobnie tutaj by nie ograniczac sie pixelami
+    mozemy uzyc funkcji repeat wowczas napiszemy*/
+    grid-template-columns: repeat(4, 5%); /*Podobnie tutaj zamiast 33% mozemy napisac 1fr (jedna frakcja) wowczas przegladarka podzieli na 4 rowne czesci*/
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.box{
+    background-color: lightblue;
+    padding: 5px;
+    text-align: center;
+}
+

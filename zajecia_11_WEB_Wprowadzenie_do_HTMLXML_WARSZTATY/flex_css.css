@@ -1,0 +1,23 @@
+
+/* zacznijmy nadawac wlasciwosci elementom z pliku html*/
+.flex-container{
+    display: flex; /* uzywamy aby okreslic jaki display ma byc uzywany w przegladarce - display: flex - jest uzywany przez wszystkie przegladarki*/
+    gap: 10px; /* nadalemy odstep miedzy cyframi */
+    padding: 20px; /*obramowanie bezposrednio do okola tekstu*/
+    justify-content: center; /*wysrodkowanie naszego tekstu - do maxymalnej szerokosci okna przegladarki ktore to okno obecnie jest otwarte
+                     flex-end - przesuwa nam wszytskow w prawo czyli na koniec
+                     flex-start - przesuwa nam wszystko w lewo czyli na poczatek
+                     space-between - ustawia przestrzen miedzy boxami tak aby byly rozsumiete rownomiernie*/
+    flex-direction: row; /*Zmieniamy kolejnosc naszych boxow w kontenerze
+                    row-reverse - odwraca nam kolejnos w rzedzie
+                    column; /*uklad kolumnowy
+                    column-reverse; /*uklad kolumnowy odwrocony*/
+}
+/*teraz przejdzmy do boxa*/
+.box{
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    /*flex: 1; /*Allow the boxes to grow equally - oznacza to ze bedziemy rozszerzac nasze elementy do rozmiaru rodzica czyli do rozmiaru okna strony, ktora wyswietlamy*/
+}

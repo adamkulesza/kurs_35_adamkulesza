@@ -1,0 +1,86 @@
+/* Jak piszemy pliki css.
+Pliki css moga nawiazywac do atrybutow jak i do poszczegolnych elementow tego naszego html
+jak to wyglada w przypadku atrybutow? Zawsze bedziemy podawali jaki tag bedziemy sobie modyfikowac w pliku css
+zalozmy ze chcemy sobie modyfikowac tag h1 - wiec piszemy */
+h1 {
+    color: blue;
+    font-size: 2vh;
+}
+
+/* WAZNE
+
+lepiej jest wpisywac wielkosci w procentach albo w wartosci vh (viewHigh) wowczas wielkosc jest skalowana do wielkosci
+okna przegladarki wartosc vh najwieksza to jest 100
+
+Nie chemy zeby oba ndglowki "pierwszy najwiekszy naglowek" i "Formularz dodania uzytkownika" oznaczone jeko <h1> w pliku
+intro.html byly tego samego koloru chemy je zroznicowac - a mamy tylko 6 rodzajow naglowkow - wiec co mozemy zrobic??
+Mozemy w pliku intro.html w azdym z tych naszych tagow zdefiniowac dwa kluczowe atrybuty:
+
+id="title_h1" - to sa nasze indywidualne identyfikatory tagow ktore bedziemy mieli ( to mowi nam ze na calej stronie
+internetowej nie mozemy miec takiego tagu z takim samym inedntfikatorem id
+
+class="title" - wartosci klas moga byc takie same
+
+pozwala nam to teraz na to ze mozemy definiowac indywidualnie do nazw id */
+
+#title_h1 {
+    color: red;
+    font-size: 2vh;}
+
+/*
+# piszemy na poczatku zeby okreslic ze ten tag ma wlasnie takie id
+dzieki temu zmieniliosmy naglowek <h1> "pierwszy najwiekszy naglowek", ktoremu nadalismy id "title_h1" na kolor
+czerwony*/
+
+/*zeby zmienic cos na klasie zaczynamy od . (kropki)*/
+
+.title {
+    color: green;
+    font-size: 3vh;
+    }
+
+/* WAZNE
+id ma piewrszenstwo - jezeli mamy zdefiniowane id to najwzniejsze jest id i ta wartosc ma pierwszenstwo (priorytet)
+Jezeli nie mamy okreslonego id to wtedy w nastepnej kolejnosci atrybut class
+Jezeli nie mamy okreslonego zadnego atrybutu to wtedy wchodzi glowny kolor dla naglowka*/
+
+/*  Magrin
+    Border
+    Padding - te 3 wartosci za pomoca css mozemy definiowac
+h1 {
+    margin-bottom: 50px;
+    }
+    */
+
+h1 {
+    margin: 3% 6%; /*Jezeli wpisujemy dwie  to pierwsza wartosc odpowiada za gore i dol a druga wartosc za lewo prawo
+    mozemy wpisywac 4 rozne wartosci - idzie to wtedy zgodnie z ruchem wskazowek zegara (gora, prawo, dol, lewo)*/
+    padding: 10%; /* podobnie jest z paddingiem*/
+    border: 1px solid red; /* dodajemy ramke*/
+    }
+
+
+/* Mozemy miec globalne style*/
+
+body {
+    background-color: sandybrown;
+    font-family: Arial, sans-serif;
+    margin: 3%;
+    padding: 0;
+    }
+
+table {
+    width: 40%;
+    border: 1px solid black;
+    }
+
+td {
+    padding: 2px;
+    border: 1px solid black;
+    }
+
+th {
+    padding: 2px;
+    bordes: 1px solid black;
+    background-color: lightgray;
+    }

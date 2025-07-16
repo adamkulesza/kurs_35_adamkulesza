@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dostęp do aparatu</title>
+</head>
+<body>
+  <h1>Użyj aparatu</h1>
+  <video id="video" width="100%" autoplay playsinline></video>
+  <button id="capture">Zrób zdjęcie</button>
+  <canvas id="canvas" style="display:none;"></canvas>
+  <img id="snapshot" />
+
+  <script>
+    const video = document.getElementById('video');
+
+    // Poproś o dostęp do kamery
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false })
+      .then(stream => {
+        video.srcObject = stream;
+      })
+      .catch(err => {
+        alert("Nie można uzyskać dostępu do kamery: " + err);
+      });
+
+    // Robienie zdjęcia
+    document.getElementById('capture').addEventListener('click', () => {
+      const canvas = document.getElementById('canvas');
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0);
+      document.getElementById('snapshot').src = canvas.toDataURL('image/png');
+    });
+  </script>
+</body>
+</html>

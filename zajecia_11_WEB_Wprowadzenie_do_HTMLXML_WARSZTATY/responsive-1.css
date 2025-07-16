@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    font-family: "Arial";
+    background-color: #86989B
+}
+
+.grid-container{
+    display: grid;
+    gap: 20px;
+}
+
+.box{
+    background-color: #4CBB17;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Abu ustawic responsywnosc to w pliku css mozemy uzyc takiego znacznika jak @media*/
+
+/* responsywnosc na komputer*/
+@media (min-width: 1024px){
+    .grid-container {
+        grid-template-row: repeat(2, 2fr);
+        grid-template-columns: repeat(3, 3fr);
+    }
+
+    .box {
+        font-size: 1.2em;
+        background-color: #9C1A1C;
+    }
+}
+
+/*responsywnosc na tablet*/
+@media (min-width: 768px) and (max-width: 1023px){
+    .grid-container {
+        grid-template-row: repeat(3, 2fr);
+        grid-template-columns: repeat(2, 3fr);
+        background-color: #9C1A1C;
+    }
+
+    .box {
+        font-size: 1.5em;
+        background-color: #F0A500;
+    }
+}
+/*responsywnosc na smartfony w tym momencie pobiera z glownej sciezki*/
