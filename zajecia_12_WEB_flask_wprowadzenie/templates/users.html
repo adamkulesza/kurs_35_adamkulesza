@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+    <button>
+        <a href="{{url_for('hello')}}">Home</a>
+    </button>
+<h2>{{ saldo }}</h2>
+<h1> Users List</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>City</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.city }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <form method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city_name" required>
+    <input type="hidden" name="form_type" value="add_user"> <!-- ta linijke dodaje sie zeby mozna bylo zarzadzac kilkoma formulazami na jednej stronie -->
+    <button type="submit">Add User</button>
+  </form>
+  <form method="post">
+    <label for="delete_name">Delete User by Name:</label>
+    <input type="text" id="delete_name" name="delete_name" required>
+    <input type="hidden" name="form_type" value="delete_user"> <!-- ta linijke dodaje sie zeby mozna bylo zarzadzac kilkoma formulazami na jednej stronie -->
+    <button type="submit">Delete User</button>
+  </form>
+  <form method="post">
+    <label for="new_saldo_id">Zmien saldo naszej aplikacji</label>
+    <input type="number" id="new_saldo_id" name="new_saldo" required>
+    <input type="hidden" name="form_type" value="change_price"> <!-- ta linijke dodaje sie zeby mozna bylo zarzadzac kilkoma formulazami na jednej stronie -->
+    <button type="submit">Zmien</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<button>
+    <a href="{{url_for('hello')}}">Home</a>
+</button>
+
+<h1>Users List</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Video Codec</th>
+        <th>Audio Channels</th>
+        <th>Device Model</th>
+        <th>Lens Model</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.videoCodec }}</td>
+        <td>{{ user.audioChannels }}</td>
+        <td>{{ user.deviceModel }}</td>
+        <td>{{ user.lensModel }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h2>Add New User</h2>
+<form method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city_name" required>
+
+    <label for="videoCodec">Video Codec:</label>
+    <input type="text" name="videoCodec" value="{{ metadata.videoCodec }}" readonly>
+
+    <label for="audioChannels">Audio Channels:</label>
+    <input type="text" name="audioChannels" value="{{ metadata.audioChannels }}" readonly>
+
+    <label for="deviceModel">Device Model:</label>
+    <input type="text" name="deviceModel" value="{{ metadata.deviceModel }}" readonly>
+
+    <label for="lensModel">Lens Model:</label>
+    <input type="text" name="lensModel" value="{{ metadata.lensModel }}" readonly>
+
+    <button type="submit">Add User</button>
+</form>
+{% endblock %}

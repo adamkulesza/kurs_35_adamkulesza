@@ -1,0 +1,72 @@
+[
+    {
+        "tytul": "Harry Potter i Kamien Filozoficzny",
+        "autor": "J.K. Rowling",
+        "rok_wydania": 1999,
+        "cena": 39.99,
+        "ilosc_na_stanie": 5,
+        "kategoria": "fantazy",
+        "ilosc": 5,
+        "ISBN": "978-3-163148410-0"
+    },
+    {
+        "tytul": "Wladca Pierscieni: Druzyna Pierscienia",
+        "autor": "J.R.R. Tolkien",
+        "rok_wydania": 1954,
+        "cena": 49.99,
+        "ilosc_na_stanie": 3,
+        "kategoria": "fantazy",
+        "ilosc": 3,
+        "ISBN": "978-0-261-10221-7"
+    },
+    {
+        "tytul": "Zbrodnia i Kara",
+        "autor": "Fiodor Dostojewski",
+        "rok_wydania": 1866,
+        "cena": 29.99,
+        "ilosc_na_stanie": 1,
+        "kategoria": "klasyka",
+        "ilosc": 2,
+        "ISBN": "978-3-14-044913-6"
+    },
+    {
+        "tytul": "Michal Wielki",
+        "autor": "Grzegorz Mroz",
+        "cena": 20.0,
+        "ilosc_na_stanie": 12,
+        "ilosc": 12,
+        "kategoria": "kryminal",
+        "ISBN": "12-25-3-1555-4",
+        "rok_wydania": 2015
+    },
+    {
+        "tytul": "Maly Kon",
+        "autor": "Adam Kuc",
+        "cena": 35.0,
+        "ilosc_na_stanie": 20,
+        "ilosc": 20,
+        "kategoria": "bajka",
+        "ISBN": "15-48-6-8552",
+        "rok_wydania": 1995
+    },
+    {
+        "tytul": "alicja",
+        "autor": "marian kyc",
+        "cena": 25.0,
+        "ilosc_na_stanie": 10,
+        "ilosc": 10,
+        "kategoria": "bajka",
+        "ISBN": "15-25-69998",
+        "rok_wydania": 1985
+    },
+    {
+        "tytul": "Wybrany",
+        "autor": "Adam kulesza",
+        "cena": 12.0,
+        "ilosc_na_stanie": 5,
+        "ilosc": 10,
+        "kategoria": "biografia",
+        "ISBN": "15-264-1-77465",
+        "rok_wydania": 2000
+    }
+]

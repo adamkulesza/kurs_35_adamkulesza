@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteka</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+
+  <h2>Saldo: {{ saldo }} PLN</h2>
+  <form action="/doladuj" method="post" class="mb-3">
+    <input type="number" name="kwota" class="form-control d-inline-block w-auto" placeholder="Kwota">
+    <button type="submit" class="btn btn-primary">Doładuj</button>
+  </form>
+
+  <h3>Lista książek</h3>
+  <table class="table table-striped">
+    <thead><tr><th>Tytuł</th><th>Autor</th><th>Ilość</th><th>Akcja</th></tr></thead>
+    <tbody>
+      {% for b in lista_ksiazek %}
+      <tr>
+        <td>{{ b.tytul }}</td>
+        <td>{{ b.autor }}</td>
+        <td>{{ b.ilosc_na_stanie }}</td>
+        <td>
+          {% if b.ilosc_na_stanie > 0 %}
+          <form action="/wypozycz" method="post" class="d-inline">
+            <input type="hidden" name="isbn" value="{{ b.ISBN }}">
+            <button type="submit" class="btn btn-success btn-sm">Wypożycz</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h3>Zakup nowej książki</h3>
+  <form action="/zakup" method="post" class="mb-3">
+    <input type="text" name="tytul" placeholder="Tytuł" class="form-control mb-1">
+    <input type="text" name="autor" placeholder="Autor" class="form-control mb-1">
+    <input type="number" name="rok" placeholder="Rok wydania" class="form-control mb-1">
+    <input type="text" name="kategoria" placeholder="Kategoria" class="form-control mb-1">
+    <input type="text" name="isbn" placeholder="ISBN" class="form-control mb-1">
+    <input type="number" step="0.01" name="koszt" placeholder="Koszt" class="form-control mb-1">
+    <input type="number" name="ilosc" placeholder="Ilość" class="form-control mb-1">
+    <button type="submit" class="btn btn-primary">Zakup</button>
+  </form>
+
+  <h3>Historia zdarzeń</h3>
+  <ul>
+    {% for h in historia %}
+    <li>{{ h }}</li>
+    {% endfor %}
+  </ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+[
+    {
+        "scene_id": "1",
+        "shot_id_name": "CD_23_0001",
+        "time_to_roll_the_shot": "30",
+        "camera_shot_type": "Wide shot",
+        "camera_movement": "Doll shot",
+        "camera_id": "1",
+        "shot_description": "Marek siedzi w trumnie, maluje usta. Robert/krasnal obok, je jabłko",
+        "lighting": "natural",
+        "actors": "Wiktoria, Nikolas, Rafał, Hubert, KURCZAK",
+        "props": "cofin",
+        "xmlFilename": "C0128M01",
+        "videoCodec": "AVC_3840_2160_H422IP@L51",
+        "deviceModel": "ILME-FX3",
+        "lensModel": "24-70mm F2.8 DG DN II | Art 024",
+        "frameCount": "250",
+        "captureFps": "23.98p",
+        "pixel": "3840",
+        "numOfVerticalLine": "2160",
+        "aspectRatio": "16:9",
+        "audioChannels": "2",
+        "audioCodec": "LPCM16"
+    }
+]

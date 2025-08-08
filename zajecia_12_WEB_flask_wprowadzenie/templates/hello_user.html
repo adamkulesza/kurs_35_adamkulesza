@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello User</title>
+</head>
+<body>
+    <button>
+        <a href="/">Home</a>
+    </button>
+    <button>
+        <a href="/users">Users</a>
+    </button>
+    <button>
+        <a href="/hello_world">Hello User</a>
+    </button>
+    {% if user_name %} <!-- tu piszemy nasza pythonowska logike - jezeli user_name bedzie to wyswietl nam to-->
+    <h1>Hello, {{ user_name }}!</h1>
+    <p>Welcome to our website.</p>
+      {% if user_name.endswith("a") %} <!-- tu piszemy nasza pythonowska logike - jezeli user_name bedzie to wyswietl nam to-->
+      <p>It's grat to see you, Ms. {{ user_name}}!</p>
+      {% else %} <!-- tu piszemy nasza pythonowska logike -w innym przypadku wyswietl nam to -->
+      <p>It's great to see you, Mr. {{ user_name }}</p>
+      {% endif %} <!-- tu piszemy nasza pythonowska logike - konczy naszego if -->
+    {% else %} <!-- tu piszemy nasza pythonowska logike -w innym przypadku wyswietl nam to -->
+    <h1>Hello, Guest!</h1>
+    <p>Please log in to enjoy personelized content.</p>
+    {% endif %} <!-- tu piszemy nasza pythonowska logike - konczy naszego if -->
+      {% if user_age < 18 %}
+      <p>Since you are under 18, please be aware of the content you access.</p>
+      {% elif user_age > 18 and user_age < 65 %}
+      <p>Enjoy our content tailored for adults!</p>
+      {% else %}
+      <p>we have special content for seniors as well!</p>
+      {% endif %}
+</body>
+</html>

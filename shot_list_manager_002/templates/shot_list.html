@@ -1,0 +1,246 @@
+{% extends "head.html" %}
+{% block content %}
+<style>
+    table {
+    border-collapse: collapse;
+    table-layout: auto; /* ważne dla szerokości */
+    width: auto; /* lub 100% – zależnie od potrzeb */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    vertical-align: top;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+
+<div style="text-align: center;">
+    <a href="{{ url_for('my_blueprint.intro') }}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">
+        Home
+    </a>
+</div>
+
+<h1 style="text-align: center;">Shot List</h1>
+<table>
+    <tr>
+        <th>Scene ID</th>
+        <th>Shot ID Name</th>
+        <th>Time To Roll The Shot</th>
+        <th>Camera Shot Type</th>
+        <th>Camera Movements</th>
+        <th>Camera ID</th>
+        <th>Shot Description</th>
+        <th>Lighting</th>
+        <th>Actors</th>
+        <th>Props</th>
+        <th>XML Filename</th>
+        <th>Video Codec</th>
+        <th>Device Model</th>
+        <th>Lens Model</th>
+        <th>Frame Count</th>
+        <th>Capture FPS</th>
+        <th>Pixel</th>
+        <th>Vertical Lines</th>
+        <th>Aspect Ratio</th>
+        <th>Audio Channels</th>
+        <th>Audio Codec</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.scene_id }}</td>
+        <td>{{ user.shot_id_name }}</td>
+        <td>{{ user.time_to_roll_the_shot }}</td>
+        <td>{{ user.camera_shot_type }}</td>
+        <td>{{ user.camera_movement }}</td>
+        <td>{{ user.camera_id }}</td>
+        <td>{{ user.shot_description }}</td>
+        <td>{{ user.lighting }}</td>
+        <td>{{ user.actors }}</td>
+        <td>{{ user.props }}</td>
+        <td>{{ user.xmlFilename }}</td>
+        <td>{{ user.videoCodec }}</td>
+        <td>{{ user.deviceModel }}</td>
+        <td>{{ user.lensModel }}</td>
+        <td>{{ user.frameCount }}</td>
+        <td>{{ user.captureFps }}</td>
+        <td>{{ user.pixel }}</td>
+        <td>{{ user.numOfVerticalLine }}</td>
+        <td>{{ user.aspectRatio }}</td>
+        <td>{{ user.audioChannels }}</td>
+        <td>{{ user.audioCodec }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<style>
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        width: 200px;
+        margin-right: 10px;
+    }
+
+    .form-group input {
+        width: 500px;
+        padding: 6px;
+    }
+
+    .form-button {
+        margin-top: 20px;
+    }
+</style>
+
+<h2>Add New Shot</h2>
+<div style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+<form method="post" enctype="multipart/form-data" style="flex: 1; min-width: 400px;">
+    <div class="form-group">
+        <label for="scene_id">Scene ID:</label>
+        <input type="text" id="scene_id" name="scene_id">
+    </div>
+
+    <div class="form-group">
+        <label for="shot_id_name">Shot ID Name:</label>
+        <input type="text" id="shot_id_name" name="shot_id_name">
+    </div>
+
+    <div class="form-group">
+        <label for="time_to_roll_the_shot">Time to roll the shot:</label>
+        <input type="number" id="time_to_roll_the_shot" name="time_to_roll_the_shot">
+    </div>
+
+    <div class="form-group">
+        <label for="camera_shot_type">Camera shot type:</label>
+        <input type="text" id="camera_shot_type" name="camera_shot_type">
+    </div>
+
+    <div class="form-group">
+        <label for="camera_movement">Camera movement:</label>
+        <input type="text" id="camera_movement" name="camera_movement">
+    </div>
+
+    <div class="form-group">
+        <label for="camera_id">Camera ID:</label>
+        <input type="text" id="camera_id" name="camera_id">
+    </div>
+
+    <div class="form-group">
+        <label for="shot_description">Shot description:</label>
+        <input type="text" id="shot_description" name="shot_description">
+    </div>
+
+    <div class="form-group">
+        <label for="lighting">Lighting:</label>
+        <input type="text" id="lighting" name="lighting">
+    </div>
+
+    <div class="form-group">
+        <label for="actors">Actors:</label>
+        <input type="text" id="actors" name="actors">
+    </div>
+
+    <div class="form-group">
+        <label for="props">Props:</label>
+        <input type="text" id="props" name="props">
+    </div>
+
+    <div class="form-group">
+        <label for="xml_file">Upload XML File:</label>
+        <input type="file" name="xml_file" accept=".xml">
+    </div>
+
+    <input type="hidden" name="form_type" value="add_user">
+    <div class="form-button">
+        <button type="submit">Add User</button>
+    </div>
+</form>
+    <form method="post" style="margin-top:20px;">
+        <label for="delete_shot_id_name">Delete Row by Shot ID Name:</label>
+        <input type="text" id="delete_shot_id_name" name="delete_shot_id_name" required>
+        <input type="hidden" name="form_type" value="delete_user">
+        <button type="submit">Delete Row</button>
+</form>
+
+    <div style="flex: 1; min-width: 300px; max-width: 500px; background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <strong>Camera Shot type</strong><br><br>
+        <strong>Extreme Wide Shot / Distant Shot:</strong><br>
+        Presents the general topography of the action space (panorama). The human figure is small, blended into a vast background, or entirely absent. Typically used for general descriptions of the setting or for showcasing landscapes.<br><br>
+        <strong>Wide Shot / Establishing Shot:</strong><br>
+        Shows a full view of the location where the action takes place. The human figure is visible, and the background or set is clearly shown. It usually serves to establish the relationship between characters and their environment and to convey general information about the setting.<br><br>
+        <strong>Full Shot:</strong><br>
+        A cropped version of the wide shot, framing the entire human figure head-to-toe. Part of the background or set is still visible. Common in silent cinema.<br><br>
+        <strong>Medium Long Shot / American Shot:</strong><br>
+        A portion of the full shot, showing the character from the knees up. The figure dominates the frame and it’s most often used in dialogue scenes.<br><br>
+        <strong>Medium Shot (MS):</strong><br>
+        Frames the character from the waist up, placing more emphasis on facial expressions than the American shot.<br><br>
+        <strong>Medium Close-Up (Half Close-Up):</strong><br>
+        Frames the character from the chest or shoulders up. The subject dominates the background.<br><br>
+        <strong>Close-Up / Big Close-Up:</strong><br>
+        The face or another object takes up a large part or all of the frame, allowing for detailed observation of expressions or features.<br><br>
+        <strong> Detail Shot / Extreme Close-Up:</strong><br>
+        A specific type of close-up that focuses on a particular body part or a key object, filling the entire frame. It maximizes viewer attention and is often used to increase emotional tension.<br><br>
+        <strong>Macro Detail Shot:</strong><br>
+        Presents a fragment of reality not visible to the naked eye.<br><br><br>
+        <strong>Other Specialized Shots</strong><br><br>
+        <strong>Over-the-Shoulder (OTS):</strong> Common in conversations. Shows one character’s point of view over another’s shoulder.<br>
+        <strong>Two-shot:</strong>  Includes two people in the same frame, often used in dialogue scenes.<br>
+        <strong>Point of View Shot (POV):</strong> Shows exactly what a character sees.<br>
+        <strong>Tracking/Dolly Shot:</strong> Camera physically moves through the scene, following the subject.<br>
+        <strong>Crane Shot:</strong> Camera moves vertically, often to reveal or emphasize a large area or dramatic moment.<br>
+        <strong>Handheld Shot:</strong> Shaky, naturalistic movement. Feels raw or documentary-like.<br>
+        <strong>Static Shot:</strong> Camera stays still—no panning or zooming.
+    </div>
+    <div style="flex: 1; min-width: 300px; max-width: 500px; background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <strong>Basic Camera Movements</strong><br><br>
+        <strong>Pan:</strong><br>
+        Horizontal movement of the camera from a fixed position (left or right).<br>
+        Often used to follow action or reveal surroundings.<br><br>
+        <strong>Tilt:</strong><br>
+        Vertical movement of the camera from a fixed position (up or down).<br>
+        Often used to show height, scale, or emphasize a character’s power.<br><br>
+        <strong>Zoom</strong><br>
+        Changing the focal length of the lens to make the subject appear closer or farther.<br>
+        Not a physical movement, but creates the illusion of moving in or out.<br>
+        Can be zoom in or zoom out.<br><br>
+        <strong>Dolly (Tracking Shot)</strong><br>
+        The camera physically moves forward/backward or side to side on a dolly (wheeled platform).<br>
+        Smooth and dynamic; can follow characters or push in for emphasis.<br><br>
+        <strong>Truck (Side Dolly)</strong><br>
+        Lateral movement of the camera (left or right) along a track or smooth surface.<br>
+        Often used to follow a moving subject or reveal surroundings.<br><br>
+        <strong>Pedestal (or Boom Up/Down)</strong><br>
+        The entire camera moves vertically up or down, often using a crane or jib.<br>
+        Used to follow a subject vertically or reveal the scale of a setting.<br><br>
+
+        <strong>Advanced/Creative Camera Movements</strong><br><br>
+        <strong>Crane Shot / Jib Shot</strong><br>
+        Camera is lifted high using a crane or jib arm.<br>
+        Can sweep over or above the scene for dramatic effect.<br><br>
+        <strong>Steadicam Shot</strong><br>
+        A camera stabilizer system allows for smooth movement while walking or running.<br>
+        Fluid but mobile; used for tracking shots, especially through tight or complex spaces.<br><br>
+        <strong>Handheld Shot</strong><br>
+        The camera is held by the operator without a stabilizer.<br>
+        Creates a shaky, realistic, or documentary-style look.<br><br>
+        <strong>Rack Focus (Focus Pull)</strong><br>
+        A shift in focus from one subject to another in the same shot.<br>
+        Directs the viewer’s attention from foreground to background (or vice versa)<br><br>
+        <strong>360-Degree Shot</strong>
+        The camera moves in a full circle around the subject.<br>
+        Creates dynamic perspective and tension, often used in action or introspective scenes.<br><br>
+        <strong>Whip Pan (Swish Pan)</strong><br>
+        A very fast pan, often used for transitions or to show sudden motion.<br>
+        Creates a blur effect and adds energy.<br><br>
+        <strong>Push-In / Pull-Out</strong><br>
+        A slow dolly-in toward the subject (push-in) or away (pull-out).<br>
+        Used to build emotion, tension, or emphasize a moment.<br>
+</div>
+{% endblock %}

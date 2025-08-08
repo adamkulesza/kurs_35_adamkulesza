@@ -1,0 +1,20 @@
+{% extends "head.html" %}
+{% block content %}
+<h2>Edit User</h2>
+<form method="post" action="{{ url_for('update_user') }}">
+    <input type="hidden" name="shot_id_name" value="{{ user.shot_id_name }}">
+
+    <label>Scene ID:</label>
+    <input type="text" name="scene_id" value="{{ user.scene_id }}"><br>
+
+    <label>Time to roll the shot:</label>
+    <input type="number" name="time_to_roll_the_shot" value="{{ user.time_to_roll_the_shot }}"><br>
+
+    <label>Camera shot type:</label>
+    <input type="text" name="camera_shot_type" value="{{ user.camera_shot_type }}"><br>
+
+    <!-- Dodaj pozostałe pola analogicznie -->
+
+    <button type="submit">Save Changes</button>
+</form>
+{% endblock %}
