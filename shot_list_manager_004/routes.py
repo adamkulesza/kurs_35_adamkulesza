@@ -48,9 +48,15 @@ def shot_list():
                 xml_file = request.files.get("xml_file")
                 xml_data = {
                     "videoCodec": "",
+                    "captureFps": "",
+                    "pixel": "",
+                    "numOfVerticalLine": "",
+                    "aspectRatio": "",
                     "audioChannels": "",
+                    "audioCodec": "",
                     "deviceModel": "",
                     "lensModel": "",
+                    "frameCount": "",
                     "xmlFilename": ""
                 }
 
